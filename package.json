@@ -1,0 +1,32 @@
+{
+  "name": "iancarina-intranet",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "format": "eslint --fix ."
+  },
+  "author": "edicsonabel",
+  "eslintConfig": {
+    "extends": "standard",
+    "rules": {
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "src/assets/**/*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edicsonabel/iancarina-intranet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edicsonabel/iancarina-intranet/issues"
+  },
+  "homepage": "https://github.com/edicsonabel/iancarina-intranet#readme",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  }
+}
