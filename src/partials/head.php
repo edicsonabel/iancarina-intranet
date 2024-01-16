@@ -17,7 +17,8 @@ $version = getVersion();
     echo PROJECT_NAME; ?>
   </title>
   <link rel='stylesheet' href='../../src/assets/fonts/Inter/inter.css?version=<?= $version; ?>'>
-  <link rel='stylesheet' href='../../src/assets/icons/style.css?version=<?= $version; ?>'>
+  <!-- <link rel='stylesheet' href='../../src/assets/icons/style.css?version=<?= $version; ?>'> -->
+  <link rel='stylesheet' href='../../src/assets/libraries/fontawesome/css/all.min.css?version=<?= $version; ?>'>
   <link rel='stylesheet' href='../../src/assets/global.css?version=<?= $version; ?>'>
   <link rel='stylesheet' href='../../src/assets/libraries/flowbite/styles.css?version=<?= $version; ?>'>
   <?php
@@ -29,6 +30,9 @@ $version = getVersion();
   <script>
     tailwind.config = {
       theme: {
+        colors: {
+          'red-mary': '#da2b1f'
+        },
         extend: {
           aspectRatio: {
             '16/8': '16 / 8'
