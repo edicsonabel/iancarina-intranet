@@ -41,25 +41,10 @@ export const deshabilitar = $element => {
   })
 }
 
-export const isCedula = cedula => {
-  const regex = /^(v|e|p|j|g)-[0-9]{7,9}$/i
-  return regex.test(cedula)
-}
-
-export const isExpediente = expediente => {
-  const regex = /^([a-z]{3}(p)?)-[0-9]{3}-[0-9]{5}((p|v|i|s)?)$/i
-  return regex.test(expediente)
-}
-
 export const isSQLInjection = txt => {
   const regex =
     /(-{2,}|'?(\s+)?\w(\s+)?'?(\s+)?=(\s+)?'?(\s+)?\w(\s+)?'?|alter(\s+)|create(\s+)|delete(\s+)|drop(\s+)?|exec(ute){0,1}(\s+)|insert( +into){0,1}|merge(\s+)|select(\s+)|update(\s+)|union( +all){0,1})/i
   return regex.test(txt)
-}
-
-export const isBusqueda = busqueda => {
-  const regex = /(\d+|(?!\s)\W+|_+)/
-  return !regex.test(busqueda)
 }
 
 export const isElement = element => {

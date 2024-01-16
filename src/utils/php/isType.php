@@ -1,33 +1,4 @@
 <?php
-function isTypeCedula($cedula)
-{
-  $regex = "/^(v|e|p|j|g)-[0-9]{7,9}$/i";
-  return preg_match($regex, $cedula);
-}
-
-function isTypeExpediente($expediente)
-{
-  $regex = "/^([a-z]{3}(p)?)-[0-9]{3}-[0-9]{5}((p|v|i|s)?)$/i";
-  return preg_match($regex, $expediente);
-}
-
-function isTypeSede($sede)
-{
-  $regex = "/^(mora i?i|np|invepuny)$/i";
-  return preg_match($regex, $sede);
-}
-
-function isTypeMaterial($prestamo)
-{
-  $regex = "/^(informe pasantia( cd)?|tesis( cd)?|libro|material referencial|servicio internet)$/i";
-  return preg_match($regex, $prestamo);
-}
-
-function isTypePrestamo($prestamo)
-{
-  $regex = "/^(in|ex)terno$/i";
-  return preg_match($regex, $prestamo);
-}
 
 function isTypeSQLInjection($str)
 {
@@ -51,30 +22,6 @@ function isTypeHora($hora)
 {
   $regex = "/^\d{2}:\d{2}:\d{2}$/";
   return preg_match($regex, $hora);
-}
-
-function isTypeEstado($estado)
-{
-  $regex = "/^(prest|entreg)ado$/i";
-  return preg_match($regex, $estado);
-}
-
-function isTypeEstatus($estatus)
-{
-  $regex = "/^(activ|suspendid|retirad)o$/i";
-  return preg_match($regex, $estatus);
-}
-
-function isTypeTipoUsuario($estatus)
-{
-  $regex = "/^(usuarios avanzados2?|administrador)$/i";
-  return preg_match($regex, $estatus);
-}
-
-function isTypeReporte($report)
-{
-  $regex = "/^(made|outstanding(all)?|audit)$/i";
-  return preg_match($regex, $report);
 }
 
 function isTypeEmail($email)

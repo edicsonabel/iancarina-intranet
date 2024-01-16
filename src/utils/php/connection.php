@@ -1,13 +1,8 @@
 <?php
 /* Includes */
 require_once(__DIR__ . '/../../../config.php');
-require_once(__DIR__ . '/../../libraries/vendor/php-jwt.php');
-
-use Firebase\JWT\JWT;
-use Firebase\JWT\Key;
 
 /* Connection */
-
 class Connection
 {
   protected $SERVER = '';
@@ -46,20 +41,5 @@ class Connection
   static function closeConnection(&$conn)
   {
     $conn = null;
-  }
-
-  static function createToken(&$payload)
-  {
-    return JWT::encode($payload, JWT_SECRET, 'HS256');
-  }
-
-  static function verifyToken(&$token)
-  {
-    try {
-      $data =  (array) JWT::decode($token, new Key(JWT_SECRET, 'HS256'));
-      return $data;
-    } catch (\Throwable $th) {
-      return null;
-    }
   }
 }
