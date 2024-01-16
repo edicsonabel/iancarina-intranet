@@ -8,7 +8,7 @@
           <span class='text-5xl sm:text-7xl md:text-8xl font-bold'>Bienvenidos</span>
           <span>
             <span class='text-xl sm:text-2xl md:text-3xl font-normal'>a nuestra</span>
-            <span class='text-red-500 font-extralight italic text-4xl'>plataforma</span>
+            <span class='text-red-mary font-extralight italic text-4xl'>plataforma</span>
           </span>
         </h2>
       </section>
@@ -74,20 +74,20 @@
       </ul>
     </div>
     <div>
-      <div class='hidden p-4 rounded-lg bg-gray-50' id='proposito' role='tabpanel' aria-labelledby='proposito-tab'>
+      <div class='hidden p-4 rounded-lg' id='proposito' role='tabpanel' aria-labelledby='proposito-tab'>
         <p class='text-sm lg:text-lg text-gray-500'>
           Producir y desarrollar productos alimenticios de alta calidad para
           garantizar la satisfacción de todos los consumidores.
         </p>
       </div>
-      <div class='hidden p-4 rounded-lg bg-gray-50' id='mision' role='tabpanel' aria-labelledby='mision-tab'>
+      <div class='hidden p-4 rounded-lg' id='mision' role='tabpanel' aria-labelledby='mision-tab'>
         <p class='text-sm lg:text-lg text-gray-500'>
           Brindar soluciones de ingredientes especiales de alta calidad que
           generen valor para nuestros clientes, accionistas, empleados, socios
           y la sociedad, asegurando la sostenibilidad del negocio.
         </p>
       </div>
-      <div class='hidden p-4 rounded-lg bg-gray-50' id='vision' role='tabpanel' aria-labelledby='vision-tab'>
+      <div class='hidden p-4 rounded-lg' id='vision' role='tabpanel' aria-labelledby='vision-tab'>
         <p class='text-sm lg:text-lg text-gray-500'>
           Ser reconocidos como una corporación global de referencia en la
           industria alimenticia, ofertante de productos innovadores y
@@ -106,37 +106,37 @@
 
 <section class='p-4 flex flex-col justify-center items-center md:flex-row md:justify-between md:[&>div]:w-1/3'>
   <div class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
-    <span class='inline-block py-3 text-center text-red-500'><i class='icon-list-ol text-7xl'></i></span>
+    <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-list-ol text-7xl'></i></span>
     <div class='px-6 py-4'>
       <div class='font-bold text-xl mb-2'>Cumplimientos</div>
       <p class='text-gray-700 text-base'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
         quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-        nihil.
+        nihil. -->
       </p>
     </div>
   </div>
 
   <div class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
-    <span class='inline-block py-3 text-center text-red-500'><i class='icon-bullhorn text-7xl'></i></span>
+    <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-bullhorn text-7xl'></i></span>
     <div class='px-6 py-4'>
       <div class='font-bold text-xl mb-2'>Promociones</div>
       <p class='text-gray-700 text-base'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
         quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-        nihil.
+        nihil. -->
       </p>
     </div>
   </div>
 
   <div class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
-    <span class='inline-block py-3 text-center text-red-500'><i class='icon-cake-candles text-7xl'></i></span>
+    <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-cake-candles text-7xl'></i></span>
     <div class='px-6 py-4'>
       <div class='font-bold text-xl mb-2'>Cumpleaños</div>
       <p class='text-gray-700 text-base'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
         quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-        nihil.
+        nihil. -->
       </p>
     </div>
   </div>
@@ -144,75 +144,31 @@
 
 <section class='min-h-[60vh] px-2 py-4 grid grid-cols-1 bg-blue-400 md:grid-cols-2 lg:grid-cols-4'>
   <div class='flex flex-col justify-center items-center text-white py-4 my-5'>
-    <i class='icon-chart-line text-7xl pb-4'></i>
+    <i class='fa-solid fa-chart-line text-7xl pb-4'></i>
     <span class='text-4xl font-bold mb-2'>9000</span>
     <p class='text-2xl'>Producción</p>
   </div>
 
   <div class='flex flex-col justify-center items-center text-white py-4 my-5'>
-    <i class='icon-ruler text-7xl pb-4'></i>
+    <i class='fa-solid fa-ruler text-7xl pb-4'></i>
     <span class='text-4xl font-bold mb-2'>96</span>
     <p class='text-2xl'>Hectáreas sembradas</p>
   </div>
 
   <div class='flex flex-col justify-center items-center text-white py-4 my-5'>
-    <i class='icon-hand-holding-dollar text-7xl pb-4'></i>
+    <i class='fa-solid fa-hand-holding-dollar text-7xl pb-4'></i>
     <span class='text-4xl font-bold mb-2'>1500</span>
     <p class='text-2xl'>Ventas mensuales</p>
   </div>
 
   <div class='flex flex-col justify-center items-center text-white py-4 my-5'>
-    <i class='icon-user-group text-7xl pb-4'></i>
+    <i class='fa-solid fa-user-group text-7xl pb-4'></i>
     <span class='text-4xl font-bold mb-2'>1400</span>
     <p class='text-2xl'>Clientes atendidos</p>
   </div>
 </section>
 
-<section class='hidden p-4 flex flex-col justify-center items-center'>
-  <div class='md:max-w-xl'>
-    <h2 class='text-2xl font-bold text-center py-2'>Conoce nuestro equipo</h2>
-    <p>
-      La empresa se enorgullece de contar con un talento comprometido y
-      emprendedor, que promueve un entorno de trabajo basado en la igualdad de
-      oportunidades, la diversidad y la inclusión.
-    </p>
-  </div>
-
-  <div class='grid grid-cols-1 md:grid-cols-2 md:gap-10'>
-    <div class='flex flex-col justify-center items-center my-8'>
-      <img class='aspect-square max-w-[250px] rounded-full' src='../../src/assets/images/employees/vicenzo-giusti.jpg' />
-      <p class='text-3xl font-bold'>Vicenzo Giusti</p>
-      <span class='font-bold text-gray-500 italic'>Presidente Fundador</span>
-    </div>
-    <div class='flex flex-col justify-center items-center my-8'>
-      <img class='aspect-square max-w-[250px] rounded-full' src='../../src/assets/images/employees/arianna-gonzalez.jpg' />
-      <p class='text-3xl font-bold'>Arianna González</p>
-      <span class='font-bold text-gray-500 italic'>Coordinador Nacional de Trade Marketing</span>
-    </div>
-    <div class='flex flex-col justify-center items-center my-8'>
-      <img class='aspect-square max-w-[250px] rounded-full' src='../../src/assets/images/employees/hector-lucena.jpg' />
-      <p class='text-3xl font-bold'>Hector Lucena</p>
-      <span class='font-bold text-gray-500 italic'>Jefe de Tecnología de Información</span>
-    </div>
-    <div class='flex flex-col justify-center items-center my-8'>
-      <img class='aspect-square max-w-[250px] rounded-full' src='../../src/assets/images/employees/maria-emilia-campos.jpg' />
-      <p class='text-3xl font-bold'>María Emilia Campos</p>
-      <span class='font-bold text-gray-500 italic'>Jefe de Desarrollo de Productos</span>
-    </div>
-    <div class='flex flex-col justify-center items-center my-8'>
-      <img class='aspect-square max-w-[250px] rounded-full' src='../../src/assets/images/employees/jorge-valera.jpg' />
-      <p class='text-3xl font-bold'>Jorge Valera</p>
-      <span class='font-bold text-gray-500 italic'>Director Comercial</span>
-    </div>
-    <div class='flex flex-col justify-center items-center my-8'>
-      <img class='aspect-square max-w-[250px] rounded-full' src='../../src/assets/images/employees/dayan-benitez.jpg' />
-      <p class='text-3xl font-bold'>Dayan Benitez</p>
-      <span class='font-bold text-gray-500 italic'>Gerente de mercado</span>
-    </div>
-  </div>
-</section>
-
-<section class='p-4 pb-24 grid grid-cols-1 lg:grid-cols-2 bg-red-500 min-h-[20vh]'>
+<section class='p-4 pb-24 grid grid-cols-1 lg:grid-cols-2 bg-red-mary min-h-[20vh]'>
   <div class='my-8 w-full flex flex-col justify-center items-center text-white text-center'>
     <h2 class='text-white text-3xl text-center py-3 font-bold'>Contacto</h2>
     <span class='block py-1'>Para comunicarte con nosotros</span>

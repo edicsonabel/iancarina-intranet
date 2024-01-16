@@ -1,10 +1,12 @@
 <?php
-require_once __DIR__ . '/../../api/news/functions.php';
-require_once __DIR__ . '/../../api/docs/functions.php';
 
 $id = isset($_GET['id']) ? trim($_GET['id']) : false;
 $page = isset($_GET['page']) ? trim($_GET['page']) : 1;
 $page = $page < 1 ? 1 : $page;
 
-$dep = 'all';
+$dep = 'legal';
+$limit = 9;
 include __DIR__ . '/../../partials/section-news.php';
+
+$title = 'Documentos de legal';
+include __DIR__ . '/../../partials/section-docs.php';

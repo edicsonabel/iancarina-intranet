@@ -25,7 +25,7 @@ const carouselOptions = {
   interval: CAROUSEL_TIME_INTERVAL,
 
   indicators: {
-    activeClasses: 'bg-red-500 dark:border-white',
+    activeClasses: 'bg-red-mary dark:border-white',
     inactiveClasses: 'bg-gray-300 hover:bg-gray-400',
     items: carouselItemsOptions
   }
@@ -77,9 +77,9 @@ const tabElements = [
 
 const options = {
   defaultTabId: 'proposito',
-  activeClasses: 'text-red-600 hover:text-red-600 border-red-600',
+  activeClasses: 'text-red-mary hover:text-red-mary border-red-mary',
   inactiveClasses:
-    'text-black hover:text-gray-600 border-black hover:border-gray-300 dark:text-black dark:hover:text-gray-600 dark:border-black dark:hover:border-gray-300'
+    'text-black hover:text-gray-600 border-black hover:border-gray-300'
 }
 const instanceOptions = {
   id: 'tabs-proposito-mision-vision',
