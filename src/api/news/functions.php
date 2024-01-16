@@ -55,7 +55,7 @@ function getNewByID($id)
 
   /* Conexión */
   $DB_MARY_CONNECTION = $DB_MARY->getConnection();
-  $query = "SELECT * FROM Noticias WITH (NOLOCK) WHERE id='$id'";
+  $query = "SELECT * FROM Noticias WHERE id='$id'";
 
   /* Respuesta */
   $res = $DB_MARY_CONNECTION->prepare($query);
@@ -72,8 +72,8 @@ function getNewByID($id)
 
   if ($data) {
     $dtNew = str_replace(' ', 'T', $data['Fecha']);
-    $queryNext = "SELECT TOP 1 id AS next FROM Noticias WITH (NOLOCK) WHERE id<>'$id' AND Fecha > '$dtNew' ORDER BY Fecha ASC";
-    $queryPrev = "SELECT TOP 1 id AS prev FROM Noticias WITH (NOLOCK) WHERE id<>'$id' AND Fecha < '$dtNew' ORDER BY Fecha DESC";
+    $queryNext = "SELECT id AS next FROM Noticias WHERE id<>'$id' AND Fecha > '$dtNew' ORDER BY Fecha ASC LIMIT 1";
+    $queryPrev = "SELECT id AS prev FROM Noticias WHERE id<>'$id' AND Fecha < '$dtNew' ORDER BY Fecha DESC LIMIT 1";
 
     /* Noticia siguiente */
     $res = $DB_MARY_CONNECTION->prepare($queryNext);

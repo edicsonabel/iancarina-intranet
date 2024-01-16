@@ -26,7 +26,8 @@ class Connection
   {
     $conn = null;
     try {
-      $conn = new PDO('sqlsrv:Server=' . $this->SERVER . ';Database=' . $this->NAME . ';TrustServerCertificate=true', $this->USER, $this->PASS);
+      // $conn = new PDO('sqlsrv:Server=' . $this->SERVER . ';Database=' . $this->NAME . ';TrustServerCertificate=true', $this->USER, $this->PASS);
+      $conn = new PDO('pgsql:host=' . $this->SERVER . ';dbname=' . $this->NAME . '', $this->USER, $this->PASS);
     } catch (PDOException $e) {
       $data = array(
         'error' => $e->getMessage()

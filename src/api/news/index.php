@@ -66,7 +66,7 @@ if (!$arrError) {
         break;
       }
 
-      $query = "SELECT email_address, names, surnames FROM PI_STUDENTS WITH (NOLOCK) WHERE email_address = '$user' AND password COLLATE Latin1_General_CS_AS = '$password'";
+      $query = "SELECT email_address, names, surnames FROM PI_STUDENTS WHERE email_address = '$user' AND password COLLATE Latin1_General_CS_AS = '$password'";
 
       /* Respuesta */
       $res = $DB_MARY_CONNECTION->prepare($query);

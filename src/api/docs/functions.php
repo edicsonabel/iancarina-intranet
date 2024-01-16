@@ -9,7 +9,7 @@ function getDocs($dep = 'all', $sort = 'id')
   /* Conexión */
   $DB_MARY_CONNECTION = $DB_MARY->getConnection();
   if ($dep === 'all') {
-    $query = "SELECT * FROM Documentos WITH (NOLOCK) ORDER BY $sort DESC";
+    $query = "SELECT * FROM Documentos ORDER BY $sort DESC";
   } else {
     $query = "SELECT * FROM Documentos WHERE departamento IN ('$dep') ORDER BY $sort DESC";
   }
@@ -37,7 +37,7 @@ function getDocs($dep = 'all', $sort = 'id')
 
 //   /* Conexión */
 //   $DB_MARY_CONNECTION = $DB_MARY->getConnection();
-//   $query = "SELECT * FROM Documentos WITH (NOLOCK) WHERE id='$id'";
+//   $query = "SELECT * FROM Documentos WHERE id='$id'";
 
 //   /* Respuesta */
 //   $res = $DB_MARY_CONNECTION->prepare($query);
