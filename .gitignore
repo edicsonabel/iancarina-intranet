@@ -75,3 +75,6 @@ yarn-error.log
 # Config and databases
 config.php
 databases.php
+
+# others
+/v/admin/
