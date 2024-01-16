@@ -3,7 +3,7 @@ Aplicación de la Intranet de Alimentos Mary, usando las siguientes tecnologías
 
 - [PHP](https://www.php.net/)
 - [Inter | Google Font](https://fonts.google.com/specimen/Inter/)
-- [IconMoon](https://icomoon.io/)
+- [Font Awesome](https://fontawesome.com/search?o=r&m=free)
 - [Tailwind](https://tailwindcss.com/)
 - [Flowbite](https://flowbite.com/)
 
