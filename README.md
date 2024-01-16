@@ -70,3 +70,16 @@ if (!defined('PROJECT_NAME')) {
   define('PROJECT_NAME', 'Intranet | Alimentos Mary'); // 'Intranet | Alimentos Mary'
 }
 ```
+
+```php
+/* file: /databases.php */
+<?php
+require_once(__DIR__ . '/src/utils/php/connection.php');
+
+/* 
+  Base de datos del aplicativo
+  Nota: No se debe cambiar los nombres de las variables
+*/
+$DB_MARY = new Connection('SERVER',  'DB',  'USER',  'PASS');
+
+```
