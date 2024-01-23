@@ -77,5 +77,4 @@ config.php
 databases.php
 
 # others
-/v/admin/
 /files/**
