@@ -82,17 +82,12 @@
       </div>
       <div class='hidden p-4 rounded-lg' id='mision' role='tabpanel' aria-labelledby='mision-tab'>
         <p class='text-sm lg:text-lg text-gray-500'>
-          Brindar soluciones de ingredientes especiales de alta calidad que
-          generen valor para nuestros clientes, accionistas, empleados, socios
-          y la sociedad, asegurando la sostenibilidad del negocio.
+          Somos una empresa que desarrolla, elabora y distribuye alimentos reconocidos por su calidad, sustentados en innovación, esfuerzo y profesionalismo que contribuye al bienestar de sus trabajadores y la familia venezolana.
         </p>
       </div>
       <div class='hidden p-4 rounded-lg' id='vision' role='tabpanel' aria-labelledby='vision-tab'>
         <p class='text-sm lg:text-lg text-gray-500'>
-          Ser reconocidos como una corporación global de referencia en la
-          industria alimenticia, ofertante de productos innovadores y
-          diferenciados, enmarcada en la conservación del ambiente y bienestar
-          a nuestros trabajadores, accionistas y sociedad.
+          Ser lideres del mercado de los productos que elaboramos y distribuimos, a nivel nacional con proyección internacional, conservando la cultura familiar de nuestra empresa.
         </p>
       </div>
     </div>
