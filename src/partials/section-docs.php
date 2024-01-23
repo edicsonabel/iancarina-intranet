@@ -21,7 +21,7 @@ if ($docs) { ?>
       foreach ($docs as $doc) {
       ?>
         <li class='text-white text-center'>
-          <a target='_blank' href='../admin/<?= $doc['Ubicacion'] ?>'><?= $doc['Titulo'] ?></a>
+          <a target='_blank' href='<?= $doc['ubicacion'] ?>'><i class="fa-regular fa-file"></i> <?= $doc['titulo'] ?></a>
         </li>
       <?php
       }

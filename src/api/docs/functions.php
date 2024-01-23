@@ -9,9 +9,9 @@ function getDocs($dep = 'all', $sort = 'id')
   /* Conexión */
   $DB_MARY_CONNECTION = $DB_MARY->getConnection();
   if ($dep === 'all') {
-    $query = "SELECT * FROM Documentos ORDER BY $sort DESC";
+    $query = "SELECT * FROM documentos ORDER BY $sort DESC";
   } else {
-    $query = "SELECT * FROM Documentos WHERE departamento IN ('$dep') ORDER BY $sort DESC";
+    $query = "SELECT * FROM documentos WHERE departamento IN ('$dep') ORDER BY $sort DESC";
   }
 
   /* Respuesta */

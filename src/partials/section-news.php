@@ -15,13 +15,14 @@ if ($new) {
 ?>
 
   <article class='my-5 mb-28 max-w-4xl mx-auto px-5'>
-    <img class='rounded-lg mx-auto' src='../admin/<?= $new['Imagen'] ?>' alt={description} />
-    <h1 class='my-4 text-4xl text-center font-bold'><?= $new['Titulo'] ?></h1>
+    <img class='rounded-lg mx-auto' src='<?= $new['imagen'] ?>' alt={description} />
+    <h1 class='my-4 text-4xl text-center font-bold'><?= $new['titulo'] ?></h1>
     <div class='text-center'>
       <!-- <FormattedDate date={pubDate} /> -->
     </div>
-    <div class='[&>p]:my-5 text-lg lg:mx-0'>
-      <?= $new['Contenido'] ?>
+    <div class='[&>p]:my-5 text-lg lg:mx-0 [&>ol]:ms-5 [&>ol]:list-decimal [&>ol]:ps-5 [&>ul]:ms-5 [&>ul]:list-disc
+ [&>ul]:ps-5'>
+      <?= $new['contenido'] ?>
       <nav class='pt-5'>
         <ul class='grid grid-cols-2'>
           <li>
@@ -56,17 +57,17 @@ if ($new) {
     foreach ($news as $new) {
       echo '
     <div  class="max-w-sm bg-white border border-gray-200 rounded-lg shadow mx-auto">
-      <a href="?id=' . $new['ID'] . '">
-        <img class="rounded-t-lg" src="../admin/' . $new['Imagen'] . '" alt="' . $new['Titulo'] . '" />
+      <a href="?id=' . $new['id'] . '">
+        <img class="rounded-t-lg" src="' . $new['imagen'] . '" alt="' . $new['titulo'] . '" />
       </a>
     <div class="p-5">
-    <a href="?id=' . $new['ID'] . '">
+    <a href="?id=' . $new['id'] . '">
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-      ' . $new['Titulo'] . '
+      ' . $new['titulo'] . '
       </h5>
     </a>
     <a
-      href="?id=' . $new['ID'] . '"
+      href="?id=' . $new['id'] . '"
       class="inline-flex
       items-center
       px-3

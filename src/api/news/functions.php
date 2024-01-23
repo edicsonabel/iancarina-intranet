@@ -55,7 +55,7 @@ function getNewByID($id)
 
   /* Conexión */
   $DB_MARY_CONNECTION = $DB_MARY->getConnection();
-  $query = "SELECT * FROM Noticias WHERE id='$id'";
+  $query = "SELECT * FROM noticias WHERE id='$id'";
 
   /* Respuesta */
   $res = $DB_MARY_CONNECTION->prepare($query);
@@ -71,9 +71,9 @@ function getNewByID($id)
   $data = $res->fetch(PDO::FETCH_ASSOC);
 
   if ($data) {
-    $dtNew = str_replace(' ', 'T', $data['Fecha']);
-    $queryNext = "SELECT id AS next FROM Noticias WHERE id<>'$id' AND Fecha > '$dtNew' ORDER BY Fecha ASC LIMIT 1";
-    $queryPrev = "SELECT id AS prev FROM Noticias WHERE id<>'$id' AND Fecha < '$dtNew' ORDER BY Fecha DESC LIMIT 1";
+    $dtNew = str_replace(' ', 'T', $data['fecha']);
+    $queryNext = "SELECT id AS next FROM noticias WHERE id<>'$id' AND fecha > '$dtNew' ORDER BY Fecha ASC LIMIT 1";
+    $queryPrev = "SELECT id AS prev FROM noticias WHERE id<>'$id' AND fecha < '$dtNew' ORDER BY Fecha DESC LIMIT 1";
 
     /* Noticia siguiente */
     $res = $DB_MARY_CONNECTION->prepare($queryNext);
