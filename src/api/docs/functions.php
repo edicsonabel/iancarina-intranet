@@ -9,9 +9,9 @@ function getDocs($dep = 'all', $sort = 'id')
   /* Conexión */
   $DB_MARY_CONNECTION = $DB_MARY->getConnection();
   if ($dep === 'all') {
-    $query = "SELECT * FROM documentos ORDER BY $sort DESC";
+    $query = "SELECT * FROM documentos ORDER BY $sort DESC;";
   } else {
-    $query = "SELECT * FROM documentos WHERE departamento IN ('$dep') ORDER BY $sort DESC";
+    $query = "SELECT * FROM documentos WHERE departamento IN ('$dep') ORDER BY $sort DESC;";
   }
 
   /* Respuesta */
@@ -30,28 +30,3 @@ function getDocs($dep = 'all', $sort = 'id')
 
   return $data;
 }
-
-// function getDocByID($id)
-// {
-//   global $DB_MARY;
-
-//   /* Conexión */
-//   $DB_MARY_CONNECTION = $DB_MARY->getConnection();
-//   $query = "SELECT * FROM Documentos WHERE id='$id'";
-
-//   /* Respuesta */
-//   $res = $DB_MARY_CONNECTION->prepare($query);
-//   try {
-//     $res->execute();
-//   } catch (Exception $e) {
-//     $arrError = [
-//       'status' => 400,
-//       'error' => 'No se pudo el documento'
-//     ];
-//   }
-
-//   $data = $res->fetch(PDO::FETCH_ASSOC);
-//   $data = $data ? trimObject($data) : false;
-
-//   return $data;
-// }
