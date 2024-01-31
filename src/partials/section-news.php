@@ -1,12 +1,9 @@
 <?php
 require_once __DIR__ . '/../api/news/functions.php';
 
-if (!$dep) {
-  $dep = 'all';
-}
-if (!$limit) {
-  $limit = 9;
-}
+$dep = $dep ?? 'all';
+$limit = $limit ?? 9;
+$new = $new ?? false;
 
 if ($id) {
   $new = getNewByID($id);

@@ -43,8 +43,10 @@ function getNews($dep = 'all', $page = 1, $limit = 6, $sort = 'fecha')
     }
     $countNews = $res->fetch(PDO::FETCH_ASSOC)['count'];
     $pagination = ceil($countNews / $limit);
+  } else {
+    $pagination = 1;
+    $data = [];
   }
-
 
   return ['news' => $data, 'active' => $page, 'pagination' => $pagination];
 }

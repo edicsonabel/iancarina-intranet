@@ -1,15 +1,9 @@
 <?php
 require_once __DIR__ . '/../api/docs/functions.php';
 
-if (!$dep) {
-  $dep = 'all';
-}
-if (!$sort) {
-  $sort = 'id';
-}
-if (!$title) {
-  $title = 'Documentos';
-}
+$dep = $dep ?? 'all';
+$sort = $sort ?? 'id';
+$title = $title ?? 'Documentos';
 
 $docs = getDocs($dep);
 
