@@ -143,6 +143,9 @@
           <ul>
             <span>Otros</span>
             <li>
+              <a class='hover:bg-gray-400' href='../cumpleaños/'>Cumpleaños</a>
+            </li>
+            <li>
               <a class='hover:bg-gray-400' href='https://cloud.alimentosmary.org/login' target=_blank>NextCloud</a>
             </li>
             <li>
