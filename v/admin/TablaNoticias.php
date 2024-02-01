@@ -1,6 +1,8 @@
 <?php
+session_start();
+$departamento = $_SESSION['Departamento'];
 require_once('conexion.php');
-$sql = "SELECT id, titulo, contenido, imagen, DATE_FORMAT(fecha, '%Y-%m-%d') AS fecha, autor, departamento FROM noticias ORDER BY fecha DESC";
+$sql = "SELECT id, titulo, contenido, imagen, DATE_FORMAT(fecha, '%Y-%m-%d') AS fecha, autor, departamento FROM noticias WHERE departamento='$departamento' ORDER BY fecha DESC";
 $stmt = $conexion->prepare($sql);
 $stmt->execute();
 $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
