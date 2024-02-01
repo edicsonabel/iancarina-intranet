@@ -1,5 +1,6 @@
 <?php
 require_once('conexion.php');
+require_once __DIR__ . '/php/slugify.php';
 session_start();
 
 if (isset($_POST['crear_noticia'])) {
@@ -46,8 +47,31 @@ if (isset($_POST['crear_noticia'])) {
         }
 
         // Obtener el nombre del archivo y cambiarlo por el título
-        $nombreArchivo = $titulo . $fileExtension;
+        $nombreArchivo = slugify($titulo) . $fileExtension;
         $rutaArchivo = '../../files/Imagenes/' . $nombreArchivo;
+
+        /* verificar si existe el archivo en la base de datos */
+        $query = "SELECT COUNT(id) AS exist FROM noticias WHERE imagen='$rutaArchivo'";
+        $stmt = $conexion->prepare($query);
+        try {
+            $stmt->execute();
+            $res = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (isset($res['exist']) && $res['exist'] > 0) {
+                $res = [
+                    'status' => 422,
+                    'message' => 'El título de la noticia ya se encuentra registrado'
+                ];
+                echo json_encode($res);
+                return;
+            }
+        } catch (\Throwable $th) {
+            $res = [
+                'status' => 422,
+                'message' => 'Error al verificar si existe la noticia'
+            ];
+            echo json_encode($res);
+            return;
+        }
 
         // Mover el archivo a la carpeta de destino
         if (!move_uploaded_file($imagen['tmp_name'], $rutaArchivo)) {
@@ -85,20 +109,20 @@ if (isset($_POST['crear_noticia'])) {
         if ($rowsInserted > 0) {
             $res = [
                 'status' => 200,
-                'message' => 'Documento creado exitosamente'
+                'message' => 'Noticia creads exitosamente'
             ];
             echo json_encode($res);
         } else {
             $res = [
                 'status' => 500,
-                'message' => 'Error al crear el documento'
+                'message' => 'Error al crear la noticia'
             ];
             echo json_encode($res);
         }
     } else {
         $res = [
             'status' => 500,
-            'message' => 'Error al crear el documento'
+            'message' => 'Error al crear la noticia'
         ];
         echo json_encode($res);
     }
@@ -145,7 +169,7 @@ if (isset($_POST['eliminar_noticia'])) {
         } else {
             $res = [
                 'status' => 500,
-                'message' => 'Error al eliminar el documento adjunto'
+                'message' => 'Error al eliminar la imagen de la noticia'
             ];
             echo json_encode($res);
         }
@@ -236,14 +260,39 @@ if (isset($_POST['editar_noticia'])) {
         $stmt_doc->execute();
         $rutaImagenAntigua = $stmt_doc->fetchColumn();
 
+        // Guardar la imagen nueva
+        $nombreArchivo = slugify($titulo) . $fileExtension;
+        $rutaArchivo = '../../files/Imagenes/' . $nombreArchivo;
+
+        /* verificar si existe el archivo en la base de datos */
+        if ($rutaImagenAntigua !== $rutaArchivo) {
+            $query = "SELECT COUNT(id) AS exist FROM noticias WHERE imagen='$rutaArchivo'";
+            $stmt = $conexion->prepare($query);
+            try {
+                $stmt->execute();
+                $res = $stmt->fetch(PDO::FETCH_ASSOC);
+                if (isset($res['exist']) && $res['exist'] > 0) {
+                    $res = [
+                        'status' => 422,
+                        'message' => 'El título de la noticia ya se encuentra registrado'
+                    ];
+                    echo json_encode($res);
+                    return;
+                }
+            } catch (\Throwable $th) {
+                $res = [
+                    'status' => 422,
+                    'message' => 'Error al verificar si existe la noticia'
+                ];
+                echo json_encode($res);
+                return;
+            }
+        }
+
         // Eliminar la imagen antigua
         if (file_exists($rutaImagenAntigua)) {
             unlink($rutaImagenAntigua);
         }
-
-        // Guardar la imagen nueva
-        $nombreArchivo = $titulo . $fileExtension;
-        $rutaArchivo = '../../files/Imagenes/' . $nombreArchivo;
 
         // Mover el archivo a la carpeta de destino
         if (!move_uploaded_file($imagen['tmp_name'], $rutaArchivo)) {

@@ -1,5 +1,6 @@
 <?php
 require_once('conexion.php');
+require_once __DIR__ . '/php/slugify.php';
 session_start();
 // $_SESSION['Departamento'] = "Tecnologia";
 
@@ -126,8 +127,31 @@ if (isset($_POST['crear_documento'])) {
         }
 
         // Obtener el nombre del archivo y cambiarlo por el título
-        $nombreArchivo = $titulo . $fileExtension;
+        $nombreArchivo = slugify($titulo) . $fileExtension;
         $rutaArchivo = '../../files/Documentos/' . $nombreArchivo;
+
+        /* verificar si existe el archivo en la base de datos */
+        $query = "SELECT COUNT(id) AS exist FROM documentos WHERE ubicacion='$rutaArchivo'";
+        $stmt = $conexion->prepare($query);
+        try {
+            $stmt->execute();
+            $res = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (isset($res['exist']) && $res['exist'] > 0) {
+                $res = [
+                    'status' => 422,
+                    'message' => 'El título del documento ya se encuentra registrado'
+                ];
+                echo json_encode($res);
+                return;
+            }
+        } catch (\Throwable $th) {
+            $res = [
+                'status' => 422,
+                'message' => 'Error al verificar si existe el documento'
+            ];
+            echo json_encode($res);
+            return;
+        }
 
         // Mover el archivo a la carpeta de destino
         if (!move_uploaded_file($documento['tmp_name'], $rutaArchivo)) {
@@ -233,11 +257,40 @@ if (isset($_POST['editar_documento'])) {
         $stmt_doc->bindParam(':documento_id', $documento_id);
         $stmt_doc->execute();
         $rutaDocumentoAntigua = $stmt_doc->fetchColumn();
-        unlink($rutaDocumentoAntigua);
 
         // Obtener el nombre del archivo y cambiarlo por el título
-        $nombreArchivo = $titulo . $fileExtension;
+        $nombreArchivo = slugify($titulo) . $fileExtension;
         $rutaArchivo = '../../files/Documentos/' . $nombreArchivo;
+
+        /* verificar si existe el archivo en la base de datos */
+        if ($rutaDocumentoAntigua !== $rutaArchivo) {
+            $query = "SELECT COUNT(id) AS exist FROM documentos WHERE ubicacion='$rutaArchivo'";
+            $stmt = $conexion->prepare($query);
+            try {
+                $stmt->execute();
+                $res = $stmt->fetch(PDO::FETCH_ASSOC);
+                if (isset($res['exist']) && $res['exist'] > 0) {
+                    $res = [
+                        'status' => 422,
+                        'message' => 'El título del documento ya se encuentra registrado'
+                    ];
+                    echo json_encode($res);
+                    return;
+                }
+            } catch (\Throwable $th) {
+                $res = [
+                    'status' => 422,
+                    'message' => 'Error al verificar si existe el documento'
+                ];
+                echo json_encode($res);
+                return;
+            }
+        }
+
+        // Eliminar el documento antiguo
+        if (file_exists($rutaDocumentoAntigua)) {
+            unlink($rutaDocumentoAntigua);
+        }
 
         // Mover el archivo a la carpeta de destino
         if (!move_uploaded_file($documento['tmp_name'], $rutaArchivo)) {
@@ -283,7 +336,33 @@ if (isset($_POST['editar_documento'])) {
         $rutaDocumento = $stmt_doc->fetchColumn();
         $extension = substr($rutaDocumento, strrpos($rutaDocumento, '.') + 1);
         // Renombramos el documento
-        $rutaDocumentoNueva = '../../files/Documentos/' . $titulo . '.' . $extension;
+        $rutaDocumentoNueva = '../../files/Documentos/' . slugify($titulo) . '.' . $extension;
+
+        /* verificar si existe el archivo en la base de datos */
+        if ($rutaDocumento !== $rutaDocumentoNueva) {
+            $query = "SELECT COUNT(id) AS exist FROM documentos WHERE ubicacion='$rutaDocumentoNueva'";
+            $stmt = $conexion->prepare($query);
+            try {
+                $stmt->execute();
+                $res = $stmt->fetch(PDO::FETCH_ASSOC);
+                if (isset($res['exist']) && $res['exist'] > 0) {
+                    $res = [
+                        'status' => 422,
+                        'message' => 'El título del documento ya se encuentra registrado'
+                    ];
+                    echo json_encode($res);
+                    return;
+                }
+            } catch (\Throwable $th) {
+                $res = [
+                    'status' => 422,
+                    'message' => 'Error al verificar si existe el documento'
+                ];
+                echo json_encode($res);
+                return;
+            }
+        }
+
         rename($rutaDocumento, $rutaDocumentoNueva);
 
         $sql = "UPDATE documentos SET titulo = :titulo, descripcion = :descripcion, ubicacion = :ubicacion WHERE id = :id";
