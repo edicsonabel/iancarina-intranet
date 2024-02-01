@@ -10,10 +10,10 @@ function getNews($dep = 'all', $page = 1, $limit = 6, $sort = 'fecha')
   /* Conexión */
   $DB_MARY_CONNECTION = $DB_MARY->getConnection();
   if ($dep === 'all') {
-    $query = "SELECT * FROM noticias ORDER BY $sort DESC LIMIT $offset, $limit;";
+    $query = "SELECT * FROM noticias ORDER BY $sort DESC, id DESC LIMIT $offset, $limit;";
     $queryCount = "SELECT COUNT(id) AS count FROM noticias;";
   } else {
-    $query = "SELECT * FROM noticias WHERE departamento IN ('$dep') ORDER BY $sort DESC LIMIT $offset, $limit;";
+    $query = "SELECT * FROM noticias WHERE departamento IN ('$dep') ORDER BY $sort DESC, id DESC LIMIT $offset, $limit;";
     $queryCount = "SELECT COUNT(id) AS count FROM noticias WHERE departamento IN ('$dep');";
   }
 
@@ -74,8 +74,8 @@ function getNewByID($id)
 
   if ($data) {
     $dtNew = str_replace(' ', 'T', $data['fecha']);
-    $queryNext = "SELECT id AS next FROM noticias WHERE id <> '$id' AND fecha > '$dtNew' ORDER BY Fecha ASC LIMIT 1;";
-    $queryPrev = "SELECT id AS prev FROM noticias WHERE id <> '$id' AND fecha < '$dtNew' ORDER BY Fecha DESC LIMIT 1;";
+    $queryNext = "SELECT id AS next FROM noticias WHERE fecha > '$dtNew' OR (fecha = '$dtNew' AND id > '$id') ORDER BY fecha ASC, id ASC LIMIT 1;";
+    $queryPrev = "SELECT id AS prev FROM noticias WHERE fecha < '$dtNew' OR (fecha = '$dtNew' AND id < '$id') ORDER BY fecha DESC, id DESC LIMIT 1;";
 
     /* Noticia siguiente */
     $res = $DB_MARY_CONNECTION->prepare($queryNext);
