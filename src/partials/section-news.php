@@ -6,7 +6,7 @@ $limit = $limit ?? 9;
 $new = $new ?? false;
 
 if ($id) {
-  $new = getNewByID($id);
+  $new = getNewByID($id, $dep);
 }
 if ($new) {
 ?>
@@ -43,7 +43,7 @@ if ($new) {
 
 
 <?php } else if ($id) {
-  echo '<span>No existe esta noticia</span>';
+  echo '<h2 class="text-4xl text-center font-bold py-10">No existe esta noticia</h2>';
 } else {
   $result = getNews($dep, $page, $limit);
   $news = $result['news'];

@@ -51,13 +51,19 @@ function getNews($dep = 'all', $page = 1, $limit = 6, $sort = 'fecha')
   return ['news' => $data, 'active' => $page, 'pagination' => $pagination];
 }
 
-function getNewByID($id)
+function getNewByID($id, $dep = 'all')
 {
   global $DB_MARY;
 
   /* Conexión */
   $DB_MARY_CONNECTION = $DB_MARY->getConnection();
-  $query = "SELECT * FROM noticias WHERE id='$id'";
+
+  $forDep = "";
+  if ($dep !== 'all') {
+    $forDep = "AND departamento='$dep'";
+  }
+
+  $query = "SELECT * FROM noticias WHERE id='$id' $forDep";
 
   /* Respuesta */
   $res = $DB_MARY_CONNECTION->prepare($query);
@@ -74,8 +80,8 @@ function getNewByID($id)
 
   if ($data) {
     $dtNew = str_replace(' ', 'T', $data['fecha']);
-    $queryNext = "SELECT id AS next FROM noticias WHERE fecha > '$dtNew' OR (fecha = '$dtNew' AND id > '$id') ORDER BY fecha ASC, id ASC LIMIT 1;";
-    $queryPrev = "SELECT id AS prev FROM noticias WHERE fecha < '$dtNew' OR (fecha = '$dtNew' AND id < '$id') ORDER BY fecha DESC, id DESC LIMIT 1;";
+    $queryNext = "SELECT id AS next FROM noticias WHERE (fecha > '$dtNew' OR (fecha = '$dtNew' AND id > '$id')) $forDep ORDER BY fecha ASC, id ASC LIMIT 1;";
+    $queryPrev = "SELECT id AS prev FROM noticias WHERE (fecha < '$dtNew' OR (fecha = '$dtNew' AND id < '$id')) $forDep ORDER BY fecha DESC, id DESC LIMIT 1;";
 
     /* Noticia siguiente */
     $res = $DB_MARY_CONNECTION->prepare($queryNext);
