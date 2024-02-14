@@ -16,7 +16,8 @@ $birthdayMonth = getBirthdayMonth();
       <tr>
         <th class='text-center px-2 md:px-14 rounded-l-full'>Fecha</th>
         <th class='text-center px-2 md:px-14'>Nombre y Apellido</th>
-        <th class='text-center px-2 md:px-14 rounded-r-full'>Departamento</th>
+        <th class='text-center px-2 md:px-14'>Departamento</th>
+        <th class='text-center px-2 md:px-14 rounded-r-full'>Compañía</th>
       </tr>
     </thead>
     <tbody>
@@ -27,6 +28,7 @@ $birthdayMonth = getBirthdayMonth();
           <td class='text-center'><?= date('d/m', strtotime($birthday['fecha_nacimiento'])); ?></td>
           <td class='text-center'><?= $birthday['nombre1'] . ' ' . $birthday['apellido1']; ?></td>
           <td class='text-center'><?= $birthday['departamento']; ?></td>
+          <td class='text-center'><?= $birthday['compania']; ?></td>
         </tr>
       <?php
       }
