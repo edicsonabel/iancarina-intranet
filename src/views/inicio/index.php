@@ -99,7 +99,7 @@
   </div>
 </section>
 
-<section class='p-4 flex flex-col justify-center items-center md:flex-row md:justify-between md:[&>div]:w-1/3'>
+<section class='p-4 flex flex-col justify-center items-center md:flex-row md:justify-between md:[&>div]:w-1/3 md:[&>a]:w-1/3'>
   <div class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
     <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-list-ol text-7xl'></i></span>
     <div class='px-6 py-4'>
@@ -124,7 +124,7 @@
     </div>
   </div>
 
-  <div class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
+  <a href='../cumpleaños/' class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
     <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-cake-candles text-7xl'></i></span>
     <div class='px-6 py-4'>
       <div class='font-bold text-xl mb-2'>Cumpleaños</div>
@@ -134,7 +134,7 @@
         nihil. -->
       </p>
     </div>
-  </div>
+  </a>
 </section>
 
 <section class='min-h-[60vh] px-2 py-4 grid grid-cols-1 bg-blue-400 md:grid-cols-2 lg:grid-cols-4'>
