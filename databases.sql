@@ -25,6 +25,13 @@ CREATE TABLE usuarios (
     nivel INT NOT NULL
 ) ENGINE=InnoDB;
 
+CREATE TABLE promociones (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    trabajador VARCHAR(250) NOT NULL,
+    descripcion VARCHAR(250) NOT NULL,
+    ubicacion VARCHAR(250) NOT NULL 
+) ENGINE=InnoDB;
+
 INSERT INTO usuarios (
   usuario,
   clave,

@@ -8,7 +8,8 @@ $nivelUsuario = $_SESSION['Nivel'];
 $menuNivel1 = [
     'Usuarios' => ['icon' => 'bi bi-people', 'url' => 'usuarios.php'],
     'Noticias' => ['icon' => 'bi bi-file-earmark-richtext', 'url' => 'noticias.php'],
-    'Documentos' => ['icon' => 'bi bi-folder-check', 'url' => 'documentos.php']
+    'Documentos' => ['icon' => 'bi bi-folder-check', 'url' => 'documentos.php'],
+    'Promociones' => ['icon' => 'bi bi-file-earmark-plus', 'url' => 'promociones.php']
 ];
 
 // Opciones de menú para nivel 2
