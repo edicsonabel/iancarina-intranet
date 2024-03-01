@@ -16,7 +16,7 @@ class Connection
     $name,
     $user,
     $pass,
-    $charset = ''
+    $charset = 'utf8mb4'
   ) {
     $this->SERVER = $server;
     $this->NAME = $name;

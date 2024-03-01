@@ -81,5 +81,5 @@ require_once(__DIR__ . '/src/utils/php/connection.php');
   Nota: No se debe cambiar los nombres de las variables
 */
 $DB_MARY = new Connection('SERVER',  'DB',  'USER',  'PASS');
-
+$DB_BIRTHDAY = new ConnectionPG('SERVER',  'DB',  'USER',  'PASS');
 ```
