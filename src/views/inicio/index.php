@@ -112,7 +112,7 @@
     </div>
   </div>
 
-  <div class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
+  <a href='../promociones/' class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
     <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-bullhorn text-7xl'></i></span>
     <div class='px-6 py-4'>
       <div class='font-bold text-xl mb-2'>Promociones</div>
@@ -122,7 +122,7 @@
         nihil. -->
       </p>
     </div>
-  </div>
+  </a>
 
   <a href='../cumpleaños/' class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
     <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-cake-candles text-7xl'></i></span>
