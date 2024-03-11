@@ -16,12 +16,12 @@ $news = $result['news'];
       <div class='max-w-32 w-1/3 aspect-square bg-cover bg-center' style='background-image: url("<?= $new["imagen"]; ?>");'>
       </div>
       <div class='flex flex-col grow p-3 gap-1'>
-        <span class='rounded-2xl bg-red-mary text-white w-fit px-2'><?= $new["departamento"]; ?></span>
+        <span class='rounded-full bg-red-mary text-white w-fit px-2'><?= $new["departamento"]; ?></span>
         <h3 class='text-2xl font-bold'><?= $new["titulo"]; ?></h3>
       </div>
     </a>
   <?php
   }
   ?>
-  <a href='<?= $linkAdd; ?>' class='text-2xl mx-auto block rounded-3xl bg-red-mary text-white w-fit px-3 py-2 mt-7'>Ver todas las noticias</a>
+  <a href='<?= $linkAdd; ?>' class='text-2xl mx-auto block rounded-full bg-red-mary text-white w-fit px-5 py-3 mt-7'>Ver todas las noticias</a>
 </section>

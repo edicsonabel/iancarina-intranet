@@ -74,7 +74,7 @@ if ($new) {
       text-center
       text-white
       bg-red-mary
-      rounded-lg
+      rounded-full
       focus:outline-none"
     >
       Leer más
