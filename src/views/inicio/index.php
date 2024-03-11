@@ -103,12 +103,7 @@
   <div class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
     <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-list-ol text-7xl'></i></span>
     <div class='px-6 py-4'>
-      <div class='font-bold text-xl mb-2'>Cumplimientos</div>
-      <p class='text-gray-700 text-base'>
-        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-        quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-        nihil. -->
-      </p>
+      <div class='font-bold text-xl mb-2'>E-Learning Compliance</div>
     </div>
   </div>
 
@@ -116,11 +111,6 @@
     <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-bullhorn text-7xl'></i></span>
     <div class='px-6 py-4'>
       <div class='font-bold text-xl mb-2'>Promociones</div>
-      <p class='text-gray-700 text-base'>
-        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-        quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-        nihil. -->
-      </p>
     </div>
   </a>
 
@@ -128,40 +118,20 @@
     <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-cake-candles text-7xl'></i></span>
     <div class='px-6 py-4'>
       <div class='font-bold text-xl mb-2'>Cumpleaños</div>
-      <p class='text-gray-700 text-base'>
-        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-        quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-        nihil. -->
-      </p>
     </div>
   </a>
 </section>
 
-<section class='min-h-[60vh] px-2 py-4 grid grid-cols-1 bg-blue-400 md:grid-cols-2 lg:grid-cols-4'>
-  <div class='flex flex-col justify-center items-center text-white py-4 my-5'>
-    <i class='fa-solid fa-chart-line text-7xl pb-4'></i>
-    <span class='text-4xl font-bold mb-2'>9000</span>
-    <p class='text-2xl'>Producción</p>
-  </div>
+<h2 class='text-3xl font-bold text-center mt-7'>Últimas noticias</h2>
+<?php
+require_once __DIR__ . '/../../api/news/functions.php';
+require_once __DIR__ . '/../../api/docs/functions.php';
 
-  <div class='flex flex-col justify-center items-center text-white py-4 my-5'>
-    <i class='fa-solid fa-ruler text-7xl pb-4'></i>
-    <span class='text-4xl font-bold mb-2'>96</span>
-    <p class='text-2xl'>Hectáreas sembradas</p>
-  </div>
-
-  <div class='flex flex-col justify-center items-center text-white py-4 my-5'>
-    <i class='fa-solid fa-hand-holding-dollar text-7xl pb-4'></i>
-    <span class='text-4xl font-bold mb-2'>1500</span>
-    <p class='text-2xl'>Ventas mensuales</p>
-  </div>
-
-  <div class='flex flex-col justify-center items-center text-white py-4 my-5'>
-    <i class='fa-solid fa-user-group text-7xl pb-4'></i>
-    <span class='text-4xl font-bold mb-2'>1400</span>
-    <p class='text-2xl'>Clientes atendidos</p>
-  </div>
-</section>
+$page = 1;
+$dep = 'all';
+$limit = 5;
+include __DIR__ . '/../../partials/section-news-relevant.php';
+?>
 
 <section class='p-4 pb-24 grid grid-cols-1 lg:grid-cols-2 bg-red-mary min-h-[20vh]'>
   <div class='my-8 w-full flex flex-col justify-center items-center text-white text-center'>
