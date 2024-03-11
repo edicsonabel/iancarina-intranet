@@ -3,3 +3,12 @@ body {
     Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
+
+.scrollable-light::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-light::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 8px;
+}
