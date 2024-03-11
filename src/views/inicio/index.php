@@ -122,7 +122,7 @@
   </a>
 </section>
 
-<h2 class='text-3xl font-bold text-center mt-7'>Últimas noticias</h2>
+<h2 id='noticias' class='text-3xl font-bold text-center mt-7'>Últimas noticias</h2>
 <?php
 require_once __DIR__ . '/../../api/news/functions.php';
 require_once __DIR__ . '/../../api/docs/functions.php';

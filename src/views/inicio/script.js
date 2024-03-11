@@ -91,3 +91,17 @@ const tabs = new Tabs(tabsElement, tabElements, options, instanceOptions)
 tabs.show('proposito')
 tabs.getTab('mision')
 tabs.getActiveTab()
+
+/* Scroll to click navbar */
+const itemsMenu = QSA('.scroll-to')
+try {
+  itemsMenu.forEach($link => {
+    const itemToGo = QS(`${$link.dataset.scrollto}`)
+    $link.addEventListener('click', event => {
+      event.preventDefault()
+      itemToGo.scrollIntoView({
+        behavior: 'smooth'
+      })
+    })
+  })
+} catch (error) {}
