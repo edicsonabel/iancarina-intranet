@@ -32,6 +32,13 @@ CREATE TABLE promociones (
     ubicacion VARCHAR(250) NOT NULL 
 ) ENGINE=InnoDB;
 
+CREATE TABLE e_learning (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(250) NOT NULL,
+    descripcion VARCHAR(250) NOT NULL,
+    ubicacion VARCHAR(250) NOT NULL 
+) ENGINE=InnoDB;
+
 INSERT INTO usuarios (
   usuario,
   clave,
