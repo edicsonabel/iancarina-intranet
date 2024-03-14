@@ -1,6 +1,7 @@
 <?php
 require_once('conexion.php');
 require_once __DIR__ . '/php/slugify.php';
+require_once __DIR__ . '/../../config.php';
 session_start();
 // $_SESSION['Departamento'] = "Tecnologia";
 
@@ -116,11 +117,11 @@ if (isset($_POST['crear_archivo'])) {
         }
 
         // Validar el tamaño del archivo (en bytes)
-        $maxSizeInBytes = 5242880; // 5 MB
+        $maxSizeInBytes = MAXIMUM_FILE_SIZE_IN_MEGABYTES * 1024 * 1024;
         if ($archivo['size'] > $maxSizeInBytes) {
             $res = [
                 'status' => 422,
-                'message' => 'El tamaño del archivo supera el límite permitido'
+                'message' => 'El tamaño del archivo supera el límite permitido de "/config.php"'
             ];
             echo json_encode($res);
             return;
@@ -163,10 +164,22 @@ if (isset($_POST['crear_archivo'])) {
             return;
         }
     } else {
+        $phpFileUploadErrors = [
+            0 => 'No hay ningún error, el archivo se cargó con éxito',
+            1 => 'El archivo cargado excede la directiva "upload_max_filesize=' . ini_get('upload_max_filesize') . '" en php.ini',
+            2 => 'El archivo cargado excede la directiva MAX_FILE_SIZE especificada en el formulario HTML',
+            3 => 'El archivo cargado se cargó sólo parcialmente',
+            4 => 'No se cargó ningún archivo',
+            6 => 'Falta una carpeta temporal',
+            7 => 'Error al escribir el archivo en el disco.',
+            8 => 'Una extensión PHP detuvo la carga del archivo.',
+        ];
+
         $res = [
             'status' => 422,
-            'message' => 'No se recibió el archivo adjunto'
+            'message' => $phpFileUploadErrors[$_FILES['archivo']['error']] ?? 'No se recibió el archivo adjunto',
         ];
+
         echo json_encode($res);
         return;
     }
