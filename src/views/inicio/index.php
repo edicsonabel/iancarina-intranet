@@ -95,7 +95,7 @@
 
   <div>
     <h2 class='text-2xl text-center font-bold py-2'>Video corporativo</h2>
-    <iframe class='w-full aspect-video' src='https://www.youtube.com/embed/I6U2Byc76j0'></iframe>
+    <video class='w-full aspect-video' poster='../../src/assets/images/video-cover.jpg' controls src='../../src/assets/videos/que-mary-eres-hoy.mp4'></video>
   </div>
 </section>
 
