@@ -255,7 +255,7 @@ if (isset($_POST['editar_archivo'])) {
         }
 
         // Validar el tamaño del archivo (en bytes)
-        $maxSizeInBytes = 5242880; // 5 MB
+        $maxSizeInBytes = MAXIMUM_FILE_SIZE_IN_MEGABYTES * 1024 * 1024;
         if ($archivo['size'] > $maxSizeInBytes) {
             $res = [
                 'status' => 422,
@@ -340,6 +340,26 @@ if (isset($_POST['editar_archivo'])) {
             return;
         }
     } else {
+
+        $phpFileUploadErrors = [
+            0 => 'No hay ningún error, el archivo se cargó con éxito',
+            1 => 'El archivo cargado excede la directiva "upload_max_filesize=' . ini_get('upload_max_filesize') . '" en php.ini',
+            2 => 'El archivo cargado excede la directiva MAX_FILE_SIZE especificada en el formulario HTML',
+            3 => 'El archivo cargado se cargó sólo parcialmente',
+            6 => 'Falta una carpeta temporal',
+            7 => 'Error al escribir el archivo en el disco.',
+            8 => 'Una extensión PHP detuvo la carga del archivo.',
+        ];
+
+        if (isset($_FILES['archivo_edit']['error']) && isset($phpFileUploadErrors[$_FILES['archivo_edit']['error']])) {
+            $res = [
+                'status' => 422,
+                'message' => $phpFileUploadErrors[$_FILES['archivo_edit']['error']]
+            ];
+            echo json_encode($res);
+            return;
+        }
+
         // Si no se recibió un nuevo archivo adjunto, actualiza solo el título y la descripción en la base de datos
         // Buscar el nombre actual del documento
         $stmt_doc = $conexion->prepare("SELECT ubicacion FROM e_learning  WHERE id = :archivo_id");
