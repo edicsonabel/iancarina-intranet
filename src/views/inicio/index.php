@@ -100,12 +100,12 @@
 </section>
 
 <section class='p-4 flex flex-col justify-center items-center md:flex-row md:justify-between md:[&>div]:w-1/3 md:[&>a]:w-1/3'>
-  <div class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
-    <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-list-ol text-7xl'></i></span>
+  <a href='../e-learning/' class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
+    <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-photo-film text-7xl'></i></span>
     <div class='px-6 py-4'>
       <div class='font-bold text-xl mb-2'>E-Learning Compliance</div>
     </div>
-  </div>
+  </a>
 
   <a href='../promociones/' class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
     <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-bullhorn text-7xl'></i></span>
