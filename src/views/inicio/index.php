@@ -95,7 +95,7 @@
 
   <div>
     <h2 class='text-2xl text-center font-bold py-2'>Video corporativo</h2>
-    <video class='w-full aspect-video' poster='../../src/assets/images/video-cover.jpg' controls src='../../src/assets/videos/que-mary-eres-hoy.mp4'></video>
+    <video class='w-full overflow-hidden rounded-lg' poster='../../src/assets/images/video-cover.jpg' controls src='../../src/assets/videos/que-mary-eres-hoy.mp4'></video>
   </div>
 </section>
 
