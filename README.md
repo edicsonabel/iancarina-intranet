@@ -69,6 +69,11 @@ Debemos crear un archivo en la raíz del proyecto con el nombre `/config.php` y 
 if (!defined('PROJECT_NAME')) {
   define('PROJECT_NAME', 'Intranet | Alimentos Mary'); // 'Intranet | Alimentos Mary'
 }
+
+/* Definir el tamaño máximo de un archivo subido en megabytes */
+if (!defined('MAXIMUM_FILE_SIZE_IN_MEGABYTES')) {
+  define('MAXIMUM_FILE_SIZE_IN_MEGABYTES', 5); // 5, 20, 30
+}
 ```
 
 ```php
