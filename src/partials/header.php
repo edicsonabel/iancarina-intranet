@@ -13,14 +13,14 @@
       </li>
 
       <li class='hover:bg-gray-400'>
-        <a href='http://www.iancarina.com.ve/extensions/' target='_blank' title='Directorio de empleados'>
+        <a href='http://www.iancarina.com.ve/extensions/' target='_blank' title='Directorio telefónico'>
           <i class=' md:hidden fa-solid fa-users'></i>
-          <span>Dir. Empleados</span>
+          <span>Dir. Telefónico</span>
         </a>
       </li>
 
       <li class='hover:bg-gray-400'>
-        <a href='../noticias/' title='Noticias' class='scroll-to' data-scrollto='#noticias'>
+        <a href='../inicio/#noticias' title=' Noticias' class='scroll-to' data-scrollto='#noticias'>
           <i class='md:hidden fa-regular fa-newspaper'></i>
           <span>Noticias</span>
         </a>
