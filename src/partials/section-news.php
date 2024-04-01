@@ -57,14 +57,14 @@ if ($new) {
     <?php
     foreach ($news as $new) {
     ?>
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow mx-auto">
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow mx-auto w-full">
         <a href="?id=<?= $new['id'] ?>">
           <!-- <img class="rounded-t-lg" src="<?= $new['imagen'] ?>" alt="<?= $new['titulo'] ?>" /> -->
-          <div class='w-full aspect-square bg-cover bg-center' title='<?= $new['titulo'] ?>' style='background-image: url("<?= $new["imagen"]; ?>");'>
+          <div class='w-full aspect-video bg-cover bg-center' title='<?= $new['titulo'] ?>' style='background-image: url("<?= $new["imagen"]; ?>");'>
           </div>
         </a>
         <div class="p-5">
-          <a href="?id=<?= $new['id'] ?>">
+          <a class="w-full" href="?id=<?= $new['id'] ?>">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
               <?= $new['titulo'] ?>
             </h5>
