@@ -18,7 +18,7 @@ if ($new) {
       <span><?= $new["autor"] ?></span> -
       <span><?= date("d/m/o", strtotime($new['fecha'])); ?></span>
     </div>
-    <div class='text-center mt-3'>
+    <div class='text-center'>
       <span class='rounded-full bg-red-mary text-white w-fit px-2 py-1'><?= $new["departamento"]; ?></span>
     </div>
     <div class='[&>p]:my-5 text-lg lg:mx-0 [&>ol]:ms-5 [&>ol]:list-decimal [&>ol]:ps-5 [&>ul]:ms-5 [&>ul]:list-disc
