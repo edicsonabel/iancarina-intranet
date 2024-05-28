@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../api/news/functions.php';
 
 $dep = $dep ?? 'all';
-$limit = $limit ?? 6;
+$limit = $limit ?? 9;
 $new = $new ?? false;
 
 if ($id) {
