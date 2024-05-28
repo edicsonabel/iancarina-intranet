@@ -175,7 +175,7 @@
 											<div class="mb-3">
 												<label class="form-label">Fecha</label>
 												<div class="input-group">
-													<input type="date" class="form-control" id="fecha" name="fecha" />
+													<input type="date" class="form-control" id="fecha" value="<?= date("Y-m-d"); ?>" name="fecha" />
 													<!-- <span class="input-group-text">
 														<i class="bi bi-calendar4"></i>
 													</span> -->
