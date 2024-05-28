@@ -63,7 +63,7 @@ if ($new) {
       foreach ($news as $new) {
       ?>
         <a href='<?= '?id=' . $new["id"]; ?>' class='flex flex-row my-3 shadow-xl rounded-2xl overflow-hidden'>
-          <div class='max-w-64 w-full aspect-square bg-cover bg-center' style='background-image: url("<?= $new["imagen"]; ?>");'>
+          <div class='max-w-48 w-full aspect-square bg-cover bg-center' style='background-image: url("<?= $new["imagen"]; ?>");'>
           </div>
           <div class='flex flex-col grow p-3 gap-1'>
             <span>
@@ -72,7 +72,7 @@ if ($new) {
               <span class='ms-2'><?= date("d/m/o", strtotime($new['fecha'])); ?></span>
             </span>
             <h3 class='text-2xl font-bold mt-3'><?= $new["titulo"]; ?></h3>
-            <p class='text-lg'><?= trim(substr(strip_tags($new["contenido"]), 0, 190)); ?>...</p>
+            <p class='text-lg'><?= trim(substr(strip_tags($new["contenido"]), 0, 150)); ?>...</p>
           </div>
         </a>
       <?php
