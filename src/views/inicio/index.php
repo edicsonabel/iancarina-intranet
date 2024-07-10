@@ -75,18 +75,18 @@
     </div>
     <div>
       <div class='hidden p-4 rounded-lg' id='proposito' role='tabpanel' aria-labelledby='proposito-tab'>
-        <p class='text-sm lg:text-lg text-gray-500'>
+        <p class='text-sm lg:text-lg text-gray-500 text-center'>
           Producir y desarrollar productos alimenticios de alta calidad para
           garantizar la satisfacción de todos los consumidores.
         </p>
       </div>
       <div class='hidden p-4 rounded-lg' id='mision' role='tabpanel' aria-labelledby='mision-tab'>
-        <p class='text-sm lg:text-lg text-gray-500'>
+        <p class='text-sm lg:text-lg text-gray-500 text-center'>
           Somos una empresa que desarrolla, elabora y distribuye alimentos reconocidos por su calidad, sustentados en innovación, esfuerzo y profesionalismo que contribuye al bienestar de sus trabajadores y la familia venezolana.
         </p>
       </div>
       <div class='hidden p-4 rounded-lg' id='vision' role='tabpanel' aria-labelledby='vision-tab'>
-        <p class='text-sm lg:text-lg text-gray-500'>
+        <p class='text-sm lg:text-lg text-gray-500 text-center'>
           Ser lideres del mercado de los productos que elaboramos y distribuimos, a nivel nacional con proyección internacional, conservando la cultura familiar de nuestra empresa.
         </p>
       </div>
@@ -100,10 +100,10 @@
 </section>
 
 <section class='p-4 flex flex-col justify-center items-center md:flex-row md:justify-between md:[&>div]:w-1/3 md:[&>a]:w-1/3'>
-  <a href='../e-learning/' class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
+  <a href='../politicas/' class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
     <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-photo-film text-7xl'></i></span>
     <div class='px-6 py-4'>
-      <div class='font-bold text-xl mb-2'>E-Learning Compliance</div>
+      <div class='font-bold text-xl mb-2'>Políticas</div>
     </div>
   </a>
 

@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../../../databases.php';
 require_once __DIR__ . '/../../utils/php/trims.php';
 
-function getELearnings($dep = 'all', $page = 1, $limit = 6, $sort = 'id')
+function getPoliticas($dep = 'all', $page = 1, $limit = 6, $sort = 'id')
 {
   global $DB_MARY;
 
@@ -24,7 +24,7 @@ function getELearnings($dep = 'all', $page = 1, $limit = 6, $sort = 'id')
   } catch (Exception $e) {
     $arrError = [
       'status' => 400,
-      'error' => 'No se pudo seleccionar las e-learnings'
+      'error' => 'No se pudo seleccionar las políticas'
     ];
   }
 
@@ -38,15 +38,15 @@ function getELearnings($dep = 'all', $page = 1, $limit = 6, $sort = 'id')
     } catch (Exception $e) {
       $arrError = [
         'status' => 400,
-        'error' => 'No se pudo seleccionar la cantidad de e-learnings'
+        'error' => 'No se pudo seleccionar la cantidad de políticas'
       ];
     }
-    $countELearnings = $res->fetch(PDO::FETCH_ASSOC)['count'];
-    $pagination = ceil($countELearnings / $limit);
+    $countPoliticas = $res->fetch(PDO::FETCH_ASSOC)['count'];
+    $pagination = ceil($countPoliticas / $limit);
   } else {
     $pagination = 1;
     $data = [];
   }
 
-  return ['e_learnings' => $data, 'active' => $page, 'pagination' => $pagination];
+  return ['politicas' => $data, 'active' => $page, 'pagination' => $pagination];
 }

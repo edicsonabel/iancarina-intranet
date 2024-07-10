@@ -1,28 +1,28 @@
 <?php
-require_once __DIR__ . '/../api/e-learning/functions.php';
+require_once __DIR__ . '/../api/politicas/functions.php';
 
 $dep = $dep ?? 'all';
 $limit = $limit ?? 9;
-$e_learning = $e_learning ?? false;
-$result = getELearnings($dep, $page, $limit);
-$e_learnings = $result['e_learnings'];
+$politica = $politica ?? false;
+$result = getPoliticas($dep, $page, $limit);
+$politicas = $result['politicas'];
 ?>
 
 <section class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 my-5 mb-28'>
   <?php
-  foreach ($e_learnings as $e_learning) {
+  foreach ($politicas as $politica) {
     echo '
 <div class="max-w-sm w-full bg-white border border-gray-200 rounded-lg shadow mx-auto">
   <div class="p-5"> 
     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-    ' . $e_learning['titulo'] . '
+    ' . $politica['titulo'] . '
     </h5>
     <p class="mb-2" >
-    ' . $e_learning['descripcion'] . '
+    ' . $politica['descripcion'] . '
     </p>
     <a
       target="_blank"
-      href="' . $e_learning['ubicacion'] . '"
+      href="' . $politica['ubicacion'] . '"
       class="inline-flex
       items-center
       px-3
