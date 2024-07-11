@@ -1,0 +1,11 @@
+<?php
+
+$id = isset($_GET['id']) ? trim($_GET['id']) : false;
+$page = isset($_GET['page']) ? trim($_GET['page']) : 1;
+$page = $page < 1 ? 1 : $page;
+
+$dep = 'legal';
+$limit = 9;
+
+$title = 'Documentos de legal';
+include __DIR__ . '/../../partials/section-docs.php';
