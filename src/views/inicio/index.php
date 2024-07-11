@@ -147,6 +147,23 @@ include __DIR__ . '/../../partials/section-news-relevant.php';
       <a class='font-extrabold italic inline-block' target='_blank' href='mailto:info@alimentosmary.com'>info@alimentosmary.com</a></span>
     <span class='block py-1'>Solo Whatsapp:
       <a class='font-extrabold italic inline-block' target='_blank' href='https://wa.me/+584120468457'>+58 4120468457</a></span>
+    <div class='block py-1 text-3xl [&>a]:mx-1'>
+      <a target='_blank' title='Instagram' href='https://www.instagram.com/alimentosmary.ve/'>
+        <i class='fa-brands fa-instagram'></i>
+      </a>
+      <a target='_blank' title='Twitter' href='https://x.com/AlimentosMaryVe/'>
+        <i class='fa-brands fa-x-twitter'></i>
+      </a>
+      <a target='_blank' title='Pinterest' href='https://www.pinterest.com/alimentosmary/'>
+        <i class='fa-brands fa-pinterest'></i>
+      </a>
+      <a target='_blank' title='YouTube' href='https://www.youtube.com/channel/UCpZk-GROJ8wBF--uZxVG5Mw/'>
+        <i class='fa-brands fa-youtube'></i>
+      </a>
+      <a target='_blank' title='Facebook' href='https://www.facebook.com/alimentosmary.ve/'>
+        <i class='fa-brands fa-facebook'></i>
+      </a>
+    </div>
   </div>
 
   <div class='my-8 w-full flex flex-col justify-center items-center'>
