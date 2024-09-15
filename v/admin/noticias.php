@@ -23,9 +23,9 @@
 
 						<div class="card">
 							<div class="card-header">
-								<div class="card-title">Noticias Registrados</div>
+								<div class="card-title">Novedades Registradas</div>
 								<button type="button" class="btn btn-success float-end bi bi-person" data-bs-toggle="modal" data-bs-target="#ModalCrear">
-									Crear Noticia
+									Crear Novedad
 								</button>
 							</div>
 							<div class="card-body">
@@ -60,7 +60,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title h4" id="ModalEditar">
-							Modificar Noticia
+							Modificar Novedad
 						</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
@@ -137,7 +137,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title h4" id="ModalCrear">
-							Cargar Noticia
+							Cargar Novedad
 						</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>

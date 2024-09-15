@@ -31,7 +31,7 @@ if ($new) {
             $next = $new['next'];
             if ($next) {
             ?>
-              <a href='./?id=<?= $next ?>' class='bg-red-mary hover:bg-red-700 text-white font-bold py-3 px-5 rounded-full'> <i class='fa-solid fa-chevron-left pr-2'></i> Siguiente</a>
+              <a href='./?id=<?= $next ?>' class='bg-red-mary hover:bg-red-700 text-white font-bold py-3 px-5 rounded-full'> <i class='fa-solid fa-chevron-left pr-2'></i> Anterior</a>
             <?php
             } ?>
           </li>
@@ -40,7 +40,7 @@ if ($new) {
             $prev = $new['prev'];
             if ($prev) {
             ?>
-              <a href='./?id=<?= $prev ?>' class='bg-red-mary hover:bg-red-700 text-white font-bold py-3 px-5 rounded-full'>Anterior <i class='fa-solid fa-chevron-right pl-2'></i></a>
+              <a href='./?id=<?= $prev ?>' class='bg-red-mary hover:bg-red-700 text-white font-bold py-3 px-5 rounded-full'> Siguiente <i class='fa-solid fa-chevron-right pl-2'></i></a>
             <?php
             } ?>
           </li>

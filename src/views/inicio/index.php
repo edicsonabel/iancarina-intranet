@@ -94,7 +94,7 @@
   </div>
 
   <div>
-    <h2 class='text-2xl text-center font-bold py-2'>Video corporativo</h2>
+<h2 class='text-2xl text-center font-bold py-2'></h2>
     <video class='w-full overflow-hidden rounded-lg' poster='../../src/assets/images/video-cover.jpg' controls src='../../src/assets/videos/que-mary-eres-hoy.mp4'></video>
   </div>
 </section>
@@ -103,7 +103,7 @@
   <a href='../politicas/' class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
     <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-photo-film text-7xl'></i></span>
     <div class='px-6 py-4'>
-      <div class='font-bold text-xl mb-2'>Políticas</div>
+      <div class='font-bold text-xl mb-2'>Recursos</div>
     </div>
   </a>
 
@@ -122,7 +122,7 @@
   </a>
 </section>
 
-<h2 id='noticias' class='text-3xl font-bold text-center mt-7'>Últimas noticias</h2>
+<h2 id='noticias' class='text-3xl font-bold text-center mt-7'>Novedades</h2>
 <?php
 require_once __DIR__ . '/../../api/news/functions.php';
 require_once __DIR__ . '/../../api/docs/functions.php';
@@ -133,8 +133,8 @@ $limit = 5;
 include __DIR__ . '/../../partials/section-news-relevant.php';
 ?>
 
-<section class='p-4 pb-24 grid grid-cols-1 lg:grid-cols-2 bg-red-mary min-h-[20vh]'>
-  <div class='my-8 w-full flex flex-col justify-center items-center text-white text-center'>
+<section class='p-4 pb-24 grid grid-cols-1 bg-red-mary min-h-[20vh]'>
+  <div class='w-full flex flex-col justify-center items-center text-white text-center'>
     <h2 class='text-white text-3xl text-center py-3 font-bold'>Contacto</h2>
     <span class='block py-1'>Para comunicarte con nosotros</span>
 
@@ -143,8 +143,8 @@ include __DIR__ . '/../../partials/section-news-relevant.php';
       /
       <a class='font-extrabold italic inline-block' target='_blank' href='tel:+582129939035'>+58 2129939035</a>
     </span>
-    <span class='block py-1'>Escríbenos por correo electrónico al:
-      <a class='font-extrabold italic inline-block' target='_blank' href='mailto:info@alimentosmary.com'>info@alimentosmary.com</a></span>
+    <!-- <span class='block py-1'>Escríbenos por correo electrónico al:
+      <a class='font-extrabold italic inline-block' target='_blank' href='mailto:info@alimentosmary.com'>info@alimentosmary.com</a></span> -->
     <span class='block py-1'>Solo Whatsapp:
       <a class='font-extrabold italic inline-block' target='_blank' href='https://wa.me/+584120468457'>+58 4120468457</a></span>
     <div class='block py-1 text-3xl [&>a]:mx-1'>
@@ -166,11 +166,11 @@ include __DIR__ . '/../../partials/section-news-relevant.php';
     </div>
   </div>
 
-  <div class='my-8 w-full flex flex-col justify-center items-center'>
+  <!-- <div class='my-8 w-full flex flex-col justify-center items-center'>
     <h2 class='text-white text-3xl text-center py-3 font-bold'>Ubicación</h2>
     <div class='relative w-full h-96'>
       <iframe class='absolute top-0 left-0 w-full h-full rounded-xl z-0' src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15739.152583714029!2d-69.2482001!3d9.527127!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e7dc0d3c63381f5%3A0xa77a0c2cad9e972e!2sMary%20Iancarina!5e0!3m2!1ses-419!2sve!4v1700116413468!5m2!1ses-419!2sve' frameborder='0' style='border: 0' allowfullscreen='' aria-hidden='false' tabindex='0'>
       </iframe>
     </div>
-  </div>
+  </div> -->
 </section>

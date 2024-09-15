@@ -8,7 +8,7 @@ $depto =  $_SESSION['Departamento'];
 // Opciones de menú para nivel 1 
 $menuNivel1 = [
     'Usuarios' => ['icon' => 'bi bi-people', 'url' => 'usuarios.php'],
-    'Noticias' => ['icon' => 'bi bi-file-earmark-richtext', 'url' => 'noticias.php'],
+    'Novedades' => ['icon' => 'bi bi-file-earmark-richtext', 'url' => 'noticias.php'],
     'Documentos' => ['icon' => 'bi bi-folder-check', 'url' => 'documentos.php'],
     'Promociones' => ['icon' => 'bi bi-file-earmark-plus', 'url' => 'promociones.php'],
     'Políticas' => ['icon' => 'bi bi-file-earmark-slides', 'url' => 'politicas.php']
@@ -16,7 +16,7 @@ $menuNivel1 = [
 
 // Opciones de menú para nivel 2
 $menuNivel2 = [
-    'Noticias' => ['icon' => 'bi bi-file-earmark-richtext', 'url' => 'noticias.php'],
+    'Novedades' => ['icon' => 'bi bi-file-earmark-richtext', 'url' => 'noticias.php'],
     'Documentos' => ['icon' => 'bi bi-folder-check', 'url' => 'documentos.php']
 ];
 

@@ -23,5 +23,5 @@ $news = $result['news'];
   <?php
   }
   ?>
-  <a href='<?= $linkAdd; ?>' class='text-2xl mx-auto block rounded-full bg-red-mary text-white w-fit px-5 py-3 mt-7'>Ver todas las noticias</a>
+  <a href='<?= $linkAdd; ?>' class='text-2xl mx-auto block rounded-full bg-red-mary text-white w-fit px-5 py-3 mt-7'>Ver todas las novedades</a>
 </section>
