@@ -3,7 +3,7 @@ require_once __DIR__ . '/../api/news/functions.php';
 
 $dep = $dep ?? 'all';
 $limit = $limit ?? 5;
-$linkAdd = $linkAdd ?? '../noticias/';
+$linkAdd = $linkAdd ?? '../novedades/';
 $result = getNews($dep, $page, $limit);
 $news = $result['news'];
 

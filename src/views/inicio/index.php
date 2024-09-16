@@ -57,17 +57,17 @@
     <div class='mb-4 border-b border-gray-200'>
       <ul class='flex flex-wrap -mb-px text-sm font-medium text-center' id='tabs-proposito-mision-vision' data-tabs-toggle='#tabs-proposito-mision-vision-tab-content' role='tablist'>
         <li class='w-1/3' role='presentation'>
-          <button class='inline-block text-black p-4 border-b-2 rounded-t-lg' id='proposito-tab' data-tabs-target='#proposito' type='button' role='tab' aria-controls='proposito' aria-selected='false'>
+          <button class='w-full inline-block text-black p-4 border-b-2 hover:border-b-2 rounded-t-lg' id='proposito-tab' data-tabs-target='#proposito' type='button' role='tab' aria-controls='proposito' aria-selected='false'>
             Propósito
           </button>
         </li>
         <li class='w-1/3' role='presentation'>
-          <button class='inline-block text-black p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300' id='mision-tab' data-tabs-target='#mision' type='button' role='tab' aria-controls='mision' aria-selected='false'>
+          <button class='w-full inline-block text-black p-4 hover:border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300' id='mision-tab' data-tabs-target='#mision' type='button' role='tab' aria-controls='mision' aria-selected='false'>
             Misión
           </button>
         </li>
         <li class='w-1/3' role='presentation'>
-          <button class='inline-block text-black p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-30' id='vision-tab' data-tabs-target='#vision' type='button' role='tab' aria-controls='vision' aria-selected='false'>
+          <button class='w-full inline-block text-black p-4 hover:border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-30' id='vision-tab' data-tabs-target='#vision' type='button' role='tab' aria-controls='vision' aria-selected='false'>
             Visión
           </button>
         </li>
@@ -94,7 +94,6 @@
   </div>
 
   <div>
-<h2 class='text-2xl text-center font-bold py-2'></h2>
     <video class='w-full overflow-hidden rounded-lg' poster='../../src/assets/images/video-cover.jpg' controls src='../../src/assets/videos/que-mary-eres-hoy.mp4'></video>
   </div>
 </section>
@@ -122,7 +121,7 @@
   </a>
 </section>
 
-<h2 id='noticias' class='text-3xl font-bold text-center mt-7'>Novedades</h2>
+<h2 id='novedades' class='text-3xl font-bold text-center mt-7'>Novedades</h2>
 <?php
 require_once __DIR__ . '/../../api/news/functions.php';
 require_once __DIR__ . '/../../api/docs/functions.php';
@@ -151,7 +150,7 @@ include __DIR__ . '/../../partials/section-news-relevant.php';
       <a target='_blank' title='Instagram' href='https://www.instagram.com/alimentosmary.ve/'>
         <i class='fa-brands fa-instagram'></i>
       </a>
-      <a target='_blank' title='Twitter' href='https://x.com/AlimentosMaryVe/'>
+      <a target='_blank' title='X' href='https://x.com/AlimentosMaryVe/'>
         <i class='fa-brands fa-x-twitter'></i>
       </a>
       <a target='_blank' title='Pinterest' href='https://www.pinterest.com/alimentosmary/'>

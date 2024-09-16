@@ -28,19 +28,19 @@ if ($new) {
         <ul class='grid grid-cols-2'>
           <li>
             <?php
-            $next = $new['next'];
-            if ($next) {
+            $prev = $new['prev'];
+            if ($prev) {
             ?>
-              <a href='./?id=<?= $next ?>' class='bg-red-mary hover:bg-red-700 text-white font-bold py-3 px-5 rounded-full'> <i class='fa-solid fa-chevron-left pr-2'></i> Anterior</a>
+              <a href='./?id=<?= $prev ?>' class='bg-red-mary hover:bg-red-700 text-white font-bold py-3 px-5 rounded-full'> <i class='fa-solid fa-chevron-left pr-2'></i> Anterior</a>
             <?php
             } ?>
           </li>
           <li class='text-end'>
             <?php
-            $prev = $new['prev'];
-            if ($prev) {
+            $next = $new['next'];
+            if ($next) {
             ?>
-              <a href='./?id=<?= $prev ?>' class='bg-red-mary hover:bg-red-700 text-white font-bold py-3 px-5 rounded-full'> Siguiente <i class='fa-solid fa-chevron-right pl-2'></i></a>
+              <a href='./?id=<?= $next ?>' class='bg-red-mary hover:bg-red-700 text-white font-bold py-3 px-5 rounded-full'> Siguiente <i class='fa-solid fa-chevron-right pl-2'></i></a>
             <?php
             } ?>
           </li>
@@ -51,7 +51,7 @@ if ($new) {
 
 <?php } else if ($id) {
 ?>
-  <h2 class="text-4xl text-center font-bold py-10">No existe esta noticia</h2>
+  <h2 class="text-4xl text-center font-bold py-10">No existe esta novedad</h2>
 <?php
 } else {
   $result = getNews($dep, $page, $limit);

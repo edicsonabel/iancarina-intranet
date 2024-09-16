@@ -75,11 +75,43 @@ const tabElements = [
   }
 ]
 
+function fnOnShow(tab) {
+  for (const objItem of tab._items) {
+    const $itemBtn = QS(`[data-tabs-target="#${objItem.id}"]`)
+
+    // if (objItem.id === tab._activeTab.id) {
+    //   setTimeout(() => {
+    //     $itemBtn.setAttribute('class', options.activeClasses)
+    //   }, 0)
+    // } else {
+    //   setTimeout(() => {
+    //     $itemBtn.setAttribute('class', options.inactiveClasses)
+    //   }, 0)
+    // }
+
+    setTimeout(() => {
+      $itemBtn.classList.remove('border-blue-600')
+      $itemBtn.classList.remove('border-gray-100')
+      $itemBtn.classList.remove('hover:text-blue-600')
+      $itemBtn.classList.remove('text-blue-600')
+      $itemBtn.classList.remove('text-gray-500')
+
+      $itemBtn.classList.remove('dark:border-blue-500')
+      $itemBtn.classList.remove('dark:border-gray-700')
+      $itemBtn.classList.remove('dark:hover:text-blue-400')
+      $itemBtn.classList.remove('dark:hover:text-gray-300')
+      $itemBtn.classList.remove('dark:text-blue-500')
+      $itemBtn.classList.remove('dark:text-gray-400')
+    }, 0)
+  }
+}
+
 const options = {
   defaultTabId: 'proposito',
-  activeClasses: 'text-red-mary hover:text-red-mary border-red-mary',
+  activeClasses: 'border-b-2 text-red-mary hover:text-red-mary border-red-mary',
   inactiveClasses:
-    'text-black hover:text-gray-600 border-black hover:border-gray-300'
+    'border-b-0 text-black hover:text-gray-600 border-black hover:border-gray-300',
+  onShow: fnOnShow
 }
 const instanceOptions = {
   id: 'tabs-proposito-mision-vision',
@@ -89,8 +121,9 @@ const instanceOptions = {
 // eslint-disable-next-line no-undef
 const tabs = new Tabs(tabsElement, tabElements, options, instanceOptions)
 tabs.show('proposito')
-tabs.getTab('mision')
-tabs.getActiveTab()
+setTimeout(() => {
+  fnOnShow(tabs)
+}, 1000)
 
 /* Scroll to click navbar */
 const itemsMenu = QSA('.scroll-to')

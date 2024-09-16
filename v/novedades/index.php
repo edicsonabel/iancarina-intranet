@@ -10,7 +10,7 @@
   Ejemplo: $view = 'login';
   Resultado: /src/views/login/
 */
-$view = 'noticias-rrhh';
+$view = 'novedades';
 
 /*
   Variable `$displayName`
@@ -23,6 +23,6 @@ $view = 'noticias-rrhh';
   Ejemplo: $displayName = 'Inicio';
   Resultado: Inicio | Project Template
 */
-$displayName = 'Noticias de Recursos Humanos';
+$displayName = 'Novedades';
 
 require_once __DIR__ . '/../../src/partials/layout.php';
