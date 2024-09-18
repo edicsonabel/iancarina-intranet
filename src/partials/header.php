@@ -3,10 +3,10 @@
     <img class='aspect-[625/169]' src='./../../src/assets/images/alimentos-mary.webp' alt='Alimentos Mary' />
   </div>
   <nav class='fixed bottom-4 left-0 right-0 z-50 md:relative md:bottom-0'>
-    <ul class='bg-slate-50 w-100 text-black mx-3 rounded-3xl flex flex-row justify-center items-center text-2xl overflow-hidden [&>li]:w-[14.2856%] [&>li>a]:flex [&>li>a]:flex-col [&>li>a]:justify-center [&>li>a]:items-center [&>li>a]:py-2 [&>li>button]:py-2 [&>li>a]:overflow-hidden [&>li>a>span]:text-xs [&>li>button]:text-xs md:mx-0 md:rounded-none md:[&>li>a>span]:text-xl md:[&>li>button]:text-xl'>
+    <ul class='bg-slate-50 w-100 text-black mx-3 py-2 rounded-3xl flex flex-row justify-center items-center text-2xl overflow-hidden [&>li]:w-1/6 [&>li>button]:h-16 [&>li>a]:h-16 [&>li>a]:flex [&>li>a]:flex-col [&>li>a]:justify-center [&>li>a]:items-center [&>li>a]:overflow-hidden [&>li>a>span]:text-xs [&>li>button]:text-xs md:mx-0 md:rounded-none md:[&>li>a>span]:text-xl md:[&>li>button]:text-xl'>
       <li class='md:flex md:justify-center'>
         <a class='w-full' href='../inicio/' title='Inicio'>
-          <img class='hidden md:inline-block max-w-[150px]' src='./../../src/assets/images/logo-mary-iancarina.png' alt='Logo Alimentos Mary' />
+          <img class='hidden md:inline-block w-4/6' src='./../../src/assets/images/logo-mary-iancarina-negro.png' alt='Logo Alimentos Mary' />
           <i class='md:hidden fa-solid fa-house'></i>
           <span class='md:hidden'>Inicio</span>
         </a>
