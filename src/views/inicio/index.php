@@ -132,21 +132,23 @@ $limit = 5;
 include __DIR__ . '/../../partials/section-news-relevant.php';
 ?>
 
-<section class='p-4 pb-24 grid grid-cols-1 bg-red-mary min-h-[20vh]'>
-  <div class='w-full flex flex-col justify-center items-center text-white text-center'>
-    <h2 class='text-white text-3xl text-center py-3 font-bold'>Contacto</h2>
-    <span class='block py-1'>Para comunicarte con nosotros</span>
+<section class='grid grid-cols-1 bg-red-mary'>
+  <div class='w-full flex flex-col justify-center items-center text-white text-center min-h-[20vh]'>
+    <!-- <h2 class='text-white text-3xl text-center py-3 font-bold'>Contacto</h2> -->
+    <!-- <span class='block py-1'>Para comunicarte con nosotros</span> -->
 
-    <span class='block py-1'>Llámanos al
+    <!-- <span class='block py-1'>Llámanos al
       <a class='font-extrabold italic inline-block' target='_blank' href='tel:+582123075435'>+58 2123075435</a>
       /
       <a class='font-extrabold italic inline-block' target='_blank' href='tel:+582129939035'>+58 2129939035</a>
-    </span>
+    </span> -->
     <!-- <span class='block py-1'>Escríbenos por correo electrónico al:
-      <a class='font-extrabold italic inline-block' target='_blank' href='mailto:info@alimentosmary.com'>info@alimentosmary.com</a></span> -->
-    <span class='block py-1'>Solo Whatsapp:
-      <a class='font-extrabold italic inline-block' target='_blank' href='https://wa.me/+584120468457'>+58 4120468457</a></span>
-    <div class='block py-1 text-3xl [&>a]:mx-1'>
+      <a class='font-extrabold italic inline-block' target='_blank' href='mailto:info@alimentosmary.com'>info@alimentosmary.com</a>
+    </span> -->
+    <!-- <span class='block py-1'>Solo Whatsapp:
+      <a class='font-extrabold italic inline-block' target='_blank' href='https://wa.me/+584120468457'>+58 4120468457</a>
+    </span> -->
+    <div class='flex gap-5 py-1 text-3xl [&>a]:mx-1'>
       <a target='_blank' title='Instagram' href='https://www.instagram.com/alimentosmary.ve/'>
         <i class='fa-brands fa-instagram'></i>
       </a>
