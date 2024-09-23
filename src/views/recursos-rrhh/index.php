@@ -7,5 +7,5 @@ $page = $page < 1 ? 1 : $page;
 $dep = 'Recursos Humanos';
 $limit = 9;
 
-$title = 'Documentos de Recursos Humanos';
+$title = $displayName;
 include __DIR__ . '/../../partials/section-docs.php';

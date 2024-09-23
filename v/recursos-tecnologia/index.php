@@ -23,6 +23,6 @@ $view = 'recursos-tecnologia';
   Ejemplo: $displayName = 'Inicio';
   Resultado: Inicio | Project Template
 */
-$displayName = 'Recursos de Tecnología';
+$displayName = 'Recursos de tecnología';
 
 require_once __DIR__ . '/../../src/partials/layout.php';

@@ -7,5 +7,5 @@ $page = $page < 1 ? 1 : $page;
 $dep = 'tecnologia';
 $limit = 9;
 
-$title = 'Documentos de tecnología';
+$title = $displayName;
 include __DIR__ . '/../../partials/section-docs.php';

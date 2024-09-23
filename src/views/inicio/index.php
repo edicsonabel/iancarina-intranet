@@ -99,7 +99,7 @@
 </section>
 
 <section class='p-4 flex flex-col justify-center items-center md:flex-row md:justify-between md:[&>div]:w-1/3 md:[&>a]:w-1/3'>
-  <a href='../politicas/' class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
+  <a href='../recursos/' class='max-w-sm rounded overflow-hidden shadow-lg text-center my-4'>
     <span class='inline-block py-3 text-center text-red-mary'><i class='fa-solid fa-photo-film text-7xl'></i></span>
     <div class='px-6 py-4'>
       <div class='font-bold text-xl mb-2'>Recursos</div>
