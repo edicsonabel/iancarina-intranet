@@ -1,7 +1,7 @@
 $(document).ready(function () {
-  let table = $('#TablaDocumentos').DataTable({
+  let table = $('#TablaRecursos').DataTable({
     ajax: {
-      url: 'TablaDocumentos.php',
+      url: 'TablaRecursos.php',
       data: {
         opcion: 'all'
       },
@@ -106,10 +106,10 @@ $(document).ready(function () {
     if (e.target.classList.contains('editBtn')) {
       e.preventDefault()
 
-      documento_id = e.target.value
+      recurso_id = e.target.value
 
       var xhr = new XMLHttpRequest()
-      xhr.open('GET', 'CRUD_Documentos.php?documento_id=' + documento_id, true)
+      xhr.open('GET', 'CRUD_Recursos.php?recurso_id=' + recurso_id, true)
       xhr.onload = function () {
         if (xhr.status === 200) {
           var response = xhr.responseText
@@ -150,9 +150,9 @@ $(document).ready(function () {
         cancelButtonText: 'Cancelar'
       }).then(function (result) {
         if (result.isConfirmed) {
-          let documento_id = e.target.value
+          let recurso_id = e.target.value
           var xhr = new XMLHttpRequest()
-          xhr.open('POST', 'CRUD_Documentos.php', true)
+          xhr.open('POST', 'CRUD_Recursos.php', true)
           xhr.setRequestHeader(
             'Content-type',
             'application/x-www-form-urlencoded'
@@ -174,7 +174,7 @@ $(document).ready(function () {
               )
             }
           }
-          xhr.send('eliminar_documento=true&documento_id=' + documento_id)
+          xhr.send('eliminar_recurso=true&recurso_id=' + recurso_id)
         }
       })
     }
@@ -184,11 +184,20 @@ $(document).ready(function () {
     if (e.target.id === 'crear') {
       e.preventDefault()
 
-      let fileInput = document.getElementById('documento')
+      let fileInput = document.getElementById('recurso')
       let file = fileInput.files[0]
 
       // Validar la extensión del archivo
-      let allowedExtensions = ['.pdf', '.doc', '.docx']
+      let allowedExtensions = [
+        '.pdf',
+        '.doc',
+        '.docx',
+        '.mp4',
+        '.avi',
+        '.mov',
+        '.wmv',
+        '.mkv'
+      ]
       let fileExtension = file.name
         .substring(file.name.lastIndexOf('.'))
         .toLowerCase()
@@ -197,7 +206,7 @@ $(document).ready(function () {
         return
       }
       // Validar el tamaño del archivo (en bytes)
-      let maxSizeInBytes = 5242880 // 5 MB
+      let maxSizeInBytes = MAXIMUM_FILE_SIZE_IN_MEGABYTES * 1024 * 1024
       if (file.size > maxSizeInBytes) {
         Swal.fire(
           'Error',
@@ -208,14 +217,13 @@ $(document).ready(function () {
       }
 
       let formDataCrear = new FormData(e.target)
-      formDataCrear.append('crear_documento', true)
+      formDataCrear.append('crear_recurso', true)
 
       var xhr = new XMLHttpRequest()
-      xhr.open('POST', 'CRUD_Documentos.php', true)
+      xhr.open('POST', 'CRUD_Recursos.php', true)
       xhr.onload = function () {
         if (xhr.status === 200) {
           var response = xhr.responseText
-          console.log(response)
           try {
             var res = JSON.parse(response)
             if (res.status == 422) {
@@ -261,11 +269,11 @@ $(document).ready(function () {
       e.preventDefault()
 
       let formDataEditar = new FormData(e.target)
-      formDataEditar.append('editar_documento', true)
-      formDataEditar.append('documento_id', documento_id)
+      formDataEditar.append('editar_recurso', true)
+      formDataEditar.append('recurso_id', recurso_id)
 
       var xhr = new XMLHttpRequest()
-      xhr.open('POST', 'CRUD_Documentos.php', true)
+      xhr.open('POST', 'CRUD_Recursos.php', true)
       xhr.onload = function () {
         if (xhr.status === 200) {
           var response = xhr.responseText

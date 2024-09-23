@@ -1,4 +1,5 @@
 	<?php
+	require_once __DIR__ . '/../../config.php';
 	include_once('header.php');
 	include_once('conexion.php');
 	include_once('Verificar_Sesion.php');
@@ -23,15 +24,15 @@
 
 						<div class="card">
 							<div class="card-header">
-								<div class="card-title">Documento Registrados</div>
+								<div class="card-title">Recurso Registrados</div>
 								<button type="button" class="btn btn-success float-end bi bi-person" data-bs-toggle="modal" data-bs-target="#ModalCrear">
-									Crear Documento
+									Crear Recurso
 								</button>
 							</div>
 							<div class="card-body">
 								<div class="table-responsive">
 
-									<table id="TablaDocumentos" class="table custom-table">
+									<table id="TablaRecursos" class="table custom-table">
 										<thead>
 											<tr>
 												<th>Titulo</th>
@@ -60,7 +61,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title h4" id="ModalEditar">
-							Modificar Documento
+							Modificar Recurso
 						</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
@@ -81,8 +82,8 @@
 							</div>
 							<div class="row">
 								<div class="col-md-12">
-									<label for="formFile" class="form-label">Documento</label>
-									<input class="form-control" type="file" id="documento_edit" name="documento_edit" />
+									<label for="formFile" class="form-label">Recurso</label>
+									<input class="form-control" type="file" id="recurso_edit" name="recurso_edit" />
 								</div>
 							</div>
 						</div>
@@ -106,7 +107,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title h4" id="ModalCrear">
-							Cargar Documento
+							Cargar Recurso
 						</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
@@ -127,8 +128,8 @@
 							</div>
 							<div class="row">
 								<div class="col-md-12">
-									<label for="formFile" class="form-label">Documento</label>
-									<input class="form-control" type="file" id="documento" name="documento" />
+									<label for="formFile" class="form-label">Recurso</label>
+									<input class="form-control" type="file" id="recurso" name="recurso" />
 								</div>
 							</div>
 						</div>
@@ -155,4 +156,7 @@
 	<?php
 	include_once('footer.php');
 	?>
-	<script src="js/documentos.js"></script>
+	<script>
+		const MAXIMUM_FILE_SIZE_IN_MEGABYTES = <?= MAXIMUM_FILE_SIZE_IN_MEGABYTES ?>;
+	</script>
+	<script src="js/recursos.js"></script>

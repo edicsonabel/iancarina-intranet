@@ -9,15 +9,15 @@ $depto =  $_SESSION['Departamento'];
 $menuNivel1 = [
     'Usuarios' => ['icon' => 'bi bi-people', 'url' => 'usuarios.php'],
     'Novedades' => ['icon' => 'bi bi-file-earmark-richtext', 'url' => 'noticias.php'],
-    'Documentos' => ['icon' => 'bi bi-folder-check', 'url' => 'documentos.php'],
+    'Recursos' => ['icon' => 'bi bi-folder-check', 'url' => 'recursos.php'],
     'Promociones' => ['icon' => 'bi bi-file-earmark-plus', 'url' => 'promociones.php'],
-    'Políticas' => ['icon' => 'bi bi-file-earmark-slides', 'url' => 'politicas.php']
+    // 'Políticas' => ['icon' => 'bi bi-file-earmark-slides', 'url' => 'politicas.php']
 ];
 
 // Opciones de menú para nivel 2
 $menuNivel2 = [
     'Novedades' => ['icon' => 'bi bi-file-earmark-richtext', 'url' => 'noticias.php'],
-    'Documentos' => ['icon' => 'bi bi-folder-check', 'url' => 'documentos.php']
+    'Recursos' => ['icon' => 'bi bi-folder-check', 'url' => 'recursos.php']
 ];
 
 // Verificar si el usuario es de nivel 2 y del departamento de Recursos Humanos
