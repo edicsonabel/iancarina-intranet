@@ -21,11 +21,10 @@
 			<div class="content-wrapper">
 				<div class="row gx-3">
 					<div class="col-sm-12 col-12">
-
 						<div class="card">
 							<div class="card-header">
 								<div class="card-title">Recurso Registrados</div>
-								<button type="button" class="btn btn-success float-end bi bi-person" data-bs-toggle="modal" data-bs-target="#ModalCrear">
+								<button type="button" class="btn btn-success float-end bi bi-folder-plus" data-bs-toggle="modal" data-bs-target="#ModalCrear">
 									Crear Recurso
 								</button>
 							</div>

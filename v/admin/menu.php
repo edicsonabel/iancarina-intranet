@@ -26,9 +26,9 @@ if ($nivelUsuario == '2' && $depto == 'Recursos Humanos') {
 }
 
 // Verificar si el usuario es de nivel 2 y del departamento de Recursos Humanos
-if ($nivelUsuario == '2' && $depto == 'Legal') {
-    $menuNivel2['Políticas'] = ['icon' => 'bi bi-file-earmark-slides', 'url' => 'politicas.php'];
-}
+// if ($nivelUsuario == '2' && $depto == 'Legal') {
+//     $menuNivel2['Políticas'] = ['icon' => 'bi bi-file-earmark-slides', 'url' => 'politicas.php'];
+// }
 
 
 $menu = ($nivelUsuario == '1') ? $menuNivel1 : $menuNivel2;

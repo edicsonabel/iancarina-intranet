@@ -20,11 +20,10 @@
 			<div class="content-wrapper">
 				<div class="row gx-3">
 					<div class="col-sm-12 col-12">
-
 						<div class="card">
 							<div class="card-header">
 								<div class="card-title">Novedades Registradas</div>
-								<button type="button" class="btn btn-success float-end bi bi-person" data-bs-toggle="modal" data-bs-target="#ModalCrear">
+								<button type="button" class="btn btn-success float-end bi bi-plus-square-fill" data-bs-toggle="modal" data-bs-target="#ModalCrear">
 									Crear Novedad
 								</button>
 							</div>

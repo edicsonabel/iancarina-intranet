@@ -3166,7 +3166,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: 1px solid #568651;
   -webkit-text-fill-color: #232629;
-  box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.8) inset;
+  box-shadow: 0 0 0px 100px #ffffff inset;
 }
 
 /******** 11.21 File Upload ********/
